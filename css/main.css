@@ -83,32 +83,24 @@ a {
     left:100px;
     right:100px;
     border-radius:3px;
-    height: 100vh;
-    overflow-y: scroll;
 }
 
 .photosection {
-    position: absolute;
-    background-image: url('https://wallpapermemory.com/uploads/518/sherlock-wallpaper-full-hd-324247.jpg');
+    background-image: url(https://wallpapermemory.com/uploads/518/sherlock-wallpaper-full-hd-324247.jpg);
     background-size: cover;
-    top: 10px;
-    left : 10px;
-    right:10px;
+    margin: 10px 10px 0 10px;
     height: 400px;
-    border-radius:3px;
-    overflow-y: scroll;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .short_title {
-    position: absolute;
     background-color: rgb(28,44,50);
-    top: 400px;
-    border-top:solid 5px #495b61;
+    border-top: solid 5px #495b61;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    right:10px;
-    left:10px;
-    color:white;
+    margin: 0 10px;
+    color: white;
 }
 
 .black {
@@ -161,9 +153,51 @@ a {
     background-color: #131b1c;
     margin-right: 5px;
 }
+.quick-links{
+    color:#52595c;
+}
+li{
+    display: flex;
+    align-items: center;
+}
+h4{
+    padding: 8px 0;
+    font-style: italic;
+    font-weight: 400;
+    border-bottom: solid 1px black;
+    margin: 10px 0 20px 0;
+    text-align: left;
+}
+.map{
+    background-image: url('http://www.clker.com/cliparts/p/D/P/J/g/0/gray-world-map-hi.png');
+    height: 100px;
+    width: 200px;
+    margin:10px;
+}
 
+.item1 { grid-area: menu; }
+.item2 { grid-area: main; display: flex; justify-content: space-between; border-bottom: solid 2px lightgray;}
+.item3 { grid-area: right; display: flex; justify-content: space-between;}
+.item4 { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu main'
+    'menu right'
+    'menu footer';
+  grid-gap: 10px;
+  grid-column-gap: 20px;
+  padding: 10px;
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+}
+.item-ul{
+    flex:.3;
+}
 ul{
     list-style-type: none;
     margin:0;
-    padding:10px;
+    padding:0;
 }
