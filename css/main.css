@@ -20,6 +20,11 @@ body {
 }
 
 .contact-info {
+    font-size: 12px;
+  font-family: "Georgia";
+  color: rgb(162, 164, 164);
+  line-height: 1.6;
+  text-align: left;
     margin: 0;
     color: gray;
 }
@@ -114,9 +119,15 @@ a {
 }
 
 .textdeco{
-    font-family: amateur;
+     font-family: "georgia";
     color: white;
-    font-size: 24px;
+    padding-top: 10px;
+    padding-left: 25px;
+    font-size: 22px;
+    line-height: 1.2;
+ left: 611.812px;
+  top: 265.203px;
+  font-style: oblique;
 }
 
 .textdeco1 {
@@ -157,23 +168,31 @@ a {
     color:#52595c;
 }
 li{
+    font-size: 12px;
+  font-family: "Georgia";
+  color: rgb(70, 90, 99);
+line-height: 1.6;
     display: flex;
     align-items: center;
 }
 h4{
     padding: 8px 0;
-    font-style: italic;
+    font-style: oblique;
+    font-size: 14px;
+    font-family: "Georgia";
+    color: rgb(70, 92, 99);
+    line-height: 1.2;
     font-weight: 400;
     border-bottom: solid 1px black;
     margin: 10px 0 20px 0;
     text-align: left;
 }
-.map{
+/*.map{
     background-image: url('http://www.clker.com/cliparts/p/D/P/J/g/0/gray-world-map-hi.png');
     height: 100px;
     width: 200px;
     margin:10px;
-}
+}*/
 
 .item1 { grid-area: menu; }
 .item2 { grid-area: main; display: flex; justify-content: space-between; border-bottom: solid 2px lightgray;}
@@ -200,4 +219,42 @@ ul{
     list-style-type: none;
     margin:0;
     padding:0;
+}
+
+.textinfo{
+    font-size: 12px;
+  font-family: "Georgia";
+  color: rgb(162, 164, 164);
+  line-height: 1.4;
+  text-align: left;
+  
+}
+
+.foto1border1{
+    border: 1px solid rgb(215, 219, 224) ;
+    width: 220px;
+    height: 170px;
+    
+}
+
+.foto1border2{
+    border: 1px solid rgb(255,255,255);
+    width: 218px;
+    height:168px;
+}
+
+.foto1border3{
+    border:1px solid rgb(51, 51, 51);
+    width: 212px;
+    height: 162px;
+    margin:2px;
+    background-color: rgb(51,51,51);
+
+}
+
+.Tour{
+    font-size: 12px;
+  font-family: "Georgia";
+  color: rgb(70, 92, 99);
+   text-align: left;
 }
