@@ -30,7 +30,7 @@ body {
     padding:20px 100px 0 100px;
 }
 table{
-	width: 100%;
+    width: 100%;
 }
 .route-links {
     padding-top: 9px;
@@ -38,7 +38,6 @@ table{
     font-size: 14px;
     text-align: right;
 }
-
 .route-links:first-child {
 	width:max-content;
     padding-top: 0;
@@ -83,8 +82,9 @@ a {
     top: 120px;
     left:100px;
     right:100px;
-	border-radius:3px;
-    height: 850px;
+    border-radius:3px;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .photosection {
@@ -116,7 +116,6 @@ a {
     background-color: #0a0a0aa3;
     border-radius: 2px;
     width: 400px;
-    border-radius: 3px;
     top: 20px;
     right: 20px;
     padding: 15px 20px;
@@ -164,7 +163,7 @@ a {
 }
 
 ul{
-	list-style-type: none;
-	margin:0;
-	padding:10px;
+    list-style-type: none;
+    margin:0;
+    padding:10px;
 }
