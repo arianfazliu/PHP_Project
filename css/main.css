@@ -34,15 +34,19 @@ body {
     min-height: 300px;
     padding:20px 100px 0 100px;
 }
+
 table{
     width: 100%;
 }
+
 .route-links {
     padding-top: 9px;
     width:100px;
     font-size: 14px;
-    text-align: right;
+    text-align: left;
 }
+
+
 .route-links:first-child {
 	width:max-content;
     padding-top: 0;
@@ -50,11 +54,13 @@ table{
     font-size: 16px;
 }
 
+
 .feather {
     position: absolute;
     top: calc(50% - 8px);
     right: 5px;
 }
+
 
 h2 {
     margin: 0;
@@ -90,6 +96,7 @@ a {
     right:100px;
     border-radius:3px;
 }
+
 
 .photosection {
     background-image: url(https://wallpapermemory.com/uploads/518/sherlock-wallpaper-full-hd-324247.jpg);
@@ -188,12 +195,14 @@ h4{
     margin: 10px 0 20px 0;
     text-align: left;
 }
+
 /*.map{
     background-image: url('http://www.clker.com/cliparts/p/D/P/J/g/0/gray-world-map-hi.png');
     height: 100px;
     width: 200px;
     margin:10px;
 }*/
+
 
 .item1 { grid-area: menu; }
 .item2 { grid-area: main; display: flex; justify-content: space-between; border-bottom: solid 2px lightgray;}
@@ -209,13 +218,19 @@ h4{
   grid-column-gap: 20px;
   padding: 10px;
 }
+
+
 .grid-container > div {
   text-align: center;
   padding: 20px 0;
 }
+
+
 .item-ul{
     flex:.3;
 }
+
+
 ul{
     list-style-type: none;
     margin:0;
