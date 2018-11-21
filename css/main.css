@@ -57,6 +57,10 @@ h2 {
     font-weight: 400;
 }
 
+::placeholder {
+    color: white;
+}
+
 .input {
     padding: 6px 10px;
     border: none;
@@ -67,9 +71,6 @@ h2 {
     color:white;
 }
 
-::placeholder {
-    color: white;
-}
 
 a {
     text-decoration: none;
