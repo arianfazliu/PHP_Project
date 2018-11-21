@@ -234,20 +234,20 @@ ul{
 .foto1border1{
     border: 1px solid rgb(215, 219, 224) ;
     width: 220px;
-    height: 170px;
+    height: 80px;
     
 }
 
 .foto1border2{
     border: 1px solid rgb(255,255,255);
     width: 218px;
-    height:168px;
+    height:78px;
 }
 
 .foto1border3{
     border:1px solid rgb(51, 51, 51);
     width: 212px;
-    height: 162px;
+    height: 72px;
     margin:2px;
     background-color: rgb(51,51,51);
 
@@ -258,4 +258,11 @@ ul{
   font-family: "Georgia";
   color: rgb(70, 92, 99);
    text-align: left;
+}
+.Rugby{
+    font-size: 12px;
+  font-family: "Georgia";
+  color: rgb(70, 92, 99);
+  line-height: 1.2;
+  text-align: left;
 }
