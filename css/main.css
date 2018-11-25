@@ -309,6 +309,7 @@ ul {
     text-align: left;
 }
 
+
 .Rugby {
     font-size: 12px;
     font-family: "Georgia";
@@ -333,10 +334,33 @@ ul {
 }
 
 .twitterdesc{
-     font-size: 16px;
+
+    font-size: 16px;
   font-family: "Georgia";
   color: rgb(161, 164, 164);
   line-height: 1.4;
   text-align: left;
   padding-left: 15px;
+}
+
+.footer {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    min-height: 350px;
+    background-color: rgb(32,49,56);
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+.slide-panel
+{
+
+    font-family: georgia;
+    padding: 15px;
+    font-size: 13px;
+    color: rgb(151,170,176);
+    margin: 0;
+    border-bottom: solid 2px blue;
+
 }
