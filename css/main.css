@@ -344,23 +344,31 @@ ul {
 }
 
 .footer {
-    margin-top: 15px;
+    
+    margin-top: 20px;
     position: relative;
     display: flex;
     min-height: 350px;
     background-color: rgb(32,49,56);
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
+
+
+}
+.footer1 {
+    padding: 15px;
 }
 
-.slide-panel
+
+.slide-panel-title
 {
 
     font-family: georgia;
-    padding: 15px;
     font-size: 13px;
+    padding: 15px;
     color: rgb(151,170,176);
-    margin: 0;
-    border-bottom: solid 2px blue;
+    border-bottom: solid 1px;
+    
+
 
 }
