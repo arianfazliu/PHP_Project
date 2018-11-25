@@ -345,21 +345,50 @@ ul {
 
 .footer {
     margin-top: 20px;
-    display: flex;
+    //display: flex;
     height: 350px;
     background-color: rgb(32,49,56);
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
+    margin-bottom: 5px;
 }
 .footer1 {
     padding: 10px 15px;
     display: flex;
     width: 100%;
     max-height: max-content;
-    border-bottom:solid 1px #47585f;
+    border-bottom:solid 1px rgb(70,92,99);
     align-items: center;
 }
 .footer1>a{
     color: #7d8e95;
 }
+
+.bottom-footer {
+    padding: 5px 15px;
+    background-color: rgb(17,28,32);
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.copyright{
+    color: rgb(161,161,164);
+    font-family: georgia;
+    font-size: 14px;
+    font-weight:20;
+}
+
+.footer-list {
+    padding: 10px 15px;
+
+}
+.footer-links {
+    padding: 3px 0;
+    font-family: arial;
+    font-weight: lighter
+    font-size: 19px;
+    opacity: 0.7;
+    font-weight: lighter;
 
