@@ -344,31 +344,22 @@ ul {
 }
 
 .footer {
-    
     margin-top: 20px;
-    position: relative;
     display: flex;
-    min-height: 350px;
+    height: 350px;
     background-color: rgb(32,49,56);
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
-
-
 }
 .footer1 {
-    padding: 15px;
+    padding: 10px 15px;
+    display: flex;
+    width: 100%;
+    max-height: max-content;
+    border-bottom:solid 1px #47585f;
+    align-items: center;
+}
+.footer1>a{
+    color: #7d8e95;
 }
 
-
-.slide-panel-title
-{
-
-    font-family: georgia;
-    font-size: 13px;
-    padding: 15px;
-    color: rgb(151,170,176);
-    border-bottom: solid 1px;
-    
-
-
-}
