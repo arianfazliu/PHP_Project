@@ -404,3 +404,13 @@ ul {
 
 
 }
+.footer-text{
+    font-family: arial;
+    opacity: 0.7;
+    font-weight: 100;
+    color: white;
+    line-height: 1.8;
+        font-size: 12.8px;
+    width: 130px;
+    word-wrap: break-word;
+}
