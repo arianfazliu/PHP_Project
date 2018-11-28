@@ -372,10 +372,11 @@ ul {
     color: rgb(161,161,164);
     font-size: 14px;
     font-weight:20;
+    font-family: georgia;
 }
 
 .footer-list {
-    padding: 20px 15px 40px 15px;
+    padding: 20px 15px 290px 15px;
 
 }
 .footer-links {
@@ -383,4 +384,23 @@ ul {
     font-family: arial;
     opacity: 0.7;
     font-weight: 100;
+}
+.footer-list-elements{
+    font-family: georgia;
+    color: white;
+    margin: 10px 0;
+    font-weight: lighter;
+    
+}
 
+.row:after{
+    display:table;
+}
+
+.column{
+    float: left;
+    width: 30%;
+    padding-left: 32px;
+
+
+}
