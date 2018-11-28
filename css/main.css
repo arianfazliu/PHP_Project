@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 100px;
+    padding: 5px 150px;
     background-color: #1a292c;
 }
 
@@ -32,7 +32,7 @@ body {
 .table {
     background-color: #2d3e45;
     min-height: 300px;
-    padding: 20px 100px 0 100px;
+    padding: 20px 150px 0 150px;
 }
 
 table {
@@ -92,8 +92,8 @@ a {
     position: absolute;
     background-color: white;
     top: 120px;
-    left: 100px;
-    right: 100px;
+    left: 150px;
+    right: 150px;
     border-radius: 3px;
 }
 
@@ -223,15 +223,17 @@ h4 {
 .item2 {
     grid-area: main;
     display: grid;
+    grid-column-gap: 30px;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 50px;
     border-bottom: solid 2px lightgray;
 }
 
 .item3 {
     grid-area: right;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 30px;
+    padding: 0 !important;
 }
 
 .item4 {
@@ -250,7 +252,7 @@ h4 {
         'menu right'
         'menu footer';
     grid-gap: 10px;
-    grid-column-gap: 50px;
+    grid-column-gap: 30px;
     padding: 10px;
 }
 
@@ -259,12 +261,6 @@ h4 {
     text-align: center;
     padding: 20px 0;
 }
-
-
-.item-ul {
-    flex: .3;
-}
-
 
 ul {
     list-style-type: none;
@@ -286,9 +282,11 @@ ul {
     height: 100px;
 
 }
-.titleevent{
+
+.titleevent {
     text-align: left;
 }
+
 .foto1border2 {
     border: 1px solid rgb(255, 255, 255);
     height: 98px;
@@ -317,100 +315,101 @@ ul {
     line-height: 1.2;
     text-align: left;
 }
-.twitter-icon{
+
+.twitter-icon {
     display: flex;
     align-items: center;
-    border-right:solid 2px white;
+    border-right: solid 2px white;
 
 }
-.twitter-icon >img{
-    min-width:40px;
+
+.twitter-icon>img {
+    min-width: 40px;
 }
-.twitter-icon >p{
+
+.twitter-icon>p {
     font-size: 15px;
     margin: 0 10px;
     color: #53d0fb;
     min-width: 100px;
 }
 
-.twitterdesc{
-
+.twitterdesc {
+    margin: 0;
     font-size: 16px;
-  font-family: "Georgia";
-  color: rgb(161, 164, 164);
-  line-height: 1.4;
-  text-align: left;
-  padding-left: 15px;
+    font-family: "Georgia";
+    color: rgb(161, 164, 164);
+    line-height: 1.4;
+    text-align: left;
+    padding-left: 15px;
 }
 
 .footer {
     margin-top: 20px;
-    background-color: rgb(32,49,56);
+    background-color: rgb(32, 49, 56);
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
     margin-bottom: 5px;
     font-family: georgia;
 }
+
 .footer1 {
     padding: 10px 15px;
     display: flex;
     max-height: max-content;
-    border-bottom:solid 1px rgb(70,92,99);
+    border-bottom: solid 1px rgb(70, 92, 99);
     align-items: center;
 }
-.footer1>a{
+
+.footer1>a {
     color: #7d8e95;
 }
 
 .bottom-footer {
     padding: 5px 15px;
-    background-color: rgb(17,28,32);
-    
+    background-color: rgb(17, 28, 32);
+
 }
 
-.copyright{
-    color: rgb(161,161,164);
+.copyright {
+    color: rgb(161, 161, 164);
     font-size: 14px;
-    font-weight:20;
+    font-weight: 20;
     font-family: georgia;
 }
 
 .footer-list {
-    padding: 20px 15px 290px 15px;
-
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding: 20px 0;
 }
+
 .footer-links {
     padding: 3px 0;
     font-family: arial;
     opacity: 0.7;
     font-weight: 100;
 }
-.footer-list-elements{
+
+.footer-list-elements {
     font-family: georgia;
     color: white;
     margin: 10px 0;
     font-weight: lighter;
-    
 }
 
-.row:after{
-    display:table;
+.column {
+    margin: 0 20px;
 }
 
-.column{
-    float: left;
-    width: 30%;
-    padding-left: 32px;
-
-
-}
-.footer-text{
+.footer-text {
     font-family: arial;
     opacity: 0.7;
     font-weight: 100;
     color: white;
     line-height: 1.8;
-        font-size: 12.8px;
+    font-size: 12.8px;
     width: 130px;
     word-wrap: break-word;
 }
