@@ -32,7 +32,7 @@ body {
 .table {
     background-color: #2d3e45;
     min-height: 300px;
-    padding: 20px 150px 0 150px;
+    padding: 15px 150px 0 150px;
 }
 
 table {
@@ -99,7 +99,7 @@ a {
 
 
 .photosection {
-    background-image: url("../html/img/photosec-bg.jpg");
+    background-image: url("../html/img/language.jpg");
     background-size: cover;
     margin: 10px 10px 0 10px;
     height: 400px;
