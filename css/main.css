@@ -92,8 +92,8 @@ a {
     position: absolute;
     background-color: white;
     top: 120px;
-    left: 150px;
-    right: 150px;
+    left: 100px;
+    right: 100px;
     border-radius: 3px;
 }
 
@@ -406,4 +406,14 @@ ul {
     font-size: 12.8px;
     width: 130px;
     word-wrap: break-word;
+}
+
+.thelist {
+
+    height: 85px;
+    padding-left: 10px;
+    background: #1a292c;
+    font: normal 17px/23px "Tahoma" , Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+   
 }
