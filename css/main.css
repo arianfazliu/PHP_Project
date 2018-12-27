@@ -99,7 +99,7 @@ a {
 
 
 .photosection {
-    background-image: url(https://wallpapermemory.com/uploads/518/sherlock-wallpaper-full-hd-324247.jpg);
+    background-image: url("../html/img/photosec-bg.jpg");
     background-size: cover;
     margin: 10px 10px 0 10px;
     height: 400px;
@@ -207,15 +207,6 @@ h4 {
     margin: 10px 0 20px 0;
     text-align: left;
 }
-
-/*.map{
-    background-image: url('http://www.clker.com/cliparts/p/D/P/J/g/0/gray-world-map-hi.png');
-    height: 100px;
-    width: 200px;
-    margin:10px;
-}*/
-
-
 .item1 {
     grid-area: menu;
 }
@@ -361,10 +352,10 @@ ul {
     align-items: center;
 }
 
-.footer1>a {
+.footer1>p {
+    margin:0;
     color: #7d8e95;
 }
-
 .bottom-footer {
     padding: 5px 15px;
     background-color: rgb(17, 28, 32);
@@ -378,11 +369,14 @@ ul {
     font-family: georgia;
 }
 
-.footer-list {
-    display: flex;
+#hidden {
+    display: none;
     justify-content: space-between;
     overflow-x: scroll;
     padding: 20px 0;
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 .footer-links {
