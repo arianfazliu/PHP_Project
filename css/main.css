@@ -40,8 +40,10 @@ table {
 }
 
 .route-links {
+    position: relative;
     width: 100px;
     font-size: 14px;
+    cursor: pointer;
     text-align: right;
 }
 
@@ -98,28 +100,39 @@ a {
 
 
 .photosection {
-   // background-image: url("../html/img/language.jpg");
+    // background-image: url("../html/img/language.jpg");
     //background-size: cover;
     margin: 10px 10px 0 10px;
     height: 400px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .short_title {
@@ -195,22 +208,26 @@ a {
 .slideshowButton {
     cursor: pointer;
     background-color: transparent;
-    border:none;
+    border: none;
     width: 28px;
     height: 28px;
-    margin:0 10px 0 0;
-    padding:0;
+    margin: 0 10px 0 0;
+    padding: 0;
     display: inline-block;
     border-radius: 50%;
     outline: none;
     transition: background-color 0.6s ease;
 }
+
 .feather1 {
     border: solid 1px #131b1c;
     border-radius: 50%;
     padding: 2px;
     background-color: #131b1c;
-}.active, .feather1:hover {
+}
+
+.active,
+.feather1:hover {
     stroke: #464646;
 }
 
@@ -484,5 +501,105 @@ ul {
     text-align: left;
     margin: 0;
     color: lightgray;
+}
 
+#dropdownMenu {
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    width: inherit;
+    right: -2px;
+    top: 40px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 2px 10px;
+    font-family: "Georgia";
+    box-shadow: 0px 0px 20px 2px #222c30;
+    display: none;
+}
+
+#dropdownMenu .langs {
+    color: black;
+    box-shadow: 0 4px 6px -6px #2f3d44;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Popup container - can be anything you want */
+.signup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popuptext {
+    position: fixed;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: none;
+    background-color: #202b3087;
+    color: #2d3e45;
+    text-align: center;
+
+}
+
+.popupinput {
+    border-width: 0px;
+    border: none;
+    outline: none;
+    padding:2px 5px;
+    color: #2f3d44;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: #f0f0f0;
+    font-weight: 600;
+    font-family: museo-sans-rounded,sans-serif!important;
+    flex:1;
+}
+.signup-button{
+    border-radius:20px;
+    background-color: #1f2b31;
+    padding:10px 20px;
+    color:white;
+    font-size: 14px;
+    margin:15px auto;
+    width:max-content;
+
+}
+
+/* Toggle this class - hide and show the popup */
+.signup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

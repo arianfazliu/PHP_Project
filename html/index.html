@@ -10,6 +10,92 @@
 </head>
 
 <body>
+    <div class="popuptext" id="myPopup" style="font-family: museo-sans-rounded,sans-serif!important;">
+        <div style="background-color: white;box-shadow:0px 0px 20px 10px #202b307d;margin-top:calc(50% - 600px); margin-left:calc(50% - 179px); width: max-content; border-radius:5px; cursor: pointer">
+            <div style="margin-top:-12px; margin-left: calc(100% - 12px);" onclick="leaveSignUp()">
+                <svg class="feather7 feather-x-circle sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="1351">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </div>
+            <div style="border-bottom:solid 2px #dadada; margin:20px 25px;"><h1>Sign Up</h1>
+                <table class="popup-table" cellpadding="15" border="2" style="text-align:left;background-color:#f0f0f0;border-collapse:collapse;border-radius:5px;border-style: hidden;box-shadow:0 0 0 2px #dadada;font-size:17px;font-weight: 600" cellspacing="0">
+                    <tr>
+                        <td style="border: 1px solid #dadada; display: flex;">
+                            <label for="">Age</label><input class="popupinput" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #dadada;display: flex;">
+                            <label for="">Name</label><input class="popupinput" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #dadada;display: flex;">
+                            <label for="">Email</label><input class="popupinput" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #dadada;display: flex;">
+                            <label for="">Password</label><input class="popupinput" type="PASSWORD"></td>
+                    </tr>
+                </table>
+                <button class="signup-button">CREATE ACCOUNT</button></div>
+            <div style="margin:15px 0;display:flex; justify-content: space-evenly;">
+                <div style="position: relative;">
+                    <svg style="position: absolute;top:calc(50% - 9px); margin-left:5px;" class="feather6 feather-facebook sc-iwsKbI cnlcoQ" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="511">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    <button style="color: white;background-color: #3b579d;padding:10px 20px;border-radius: 20px;font-size: 14px;">
+                        <span style="margin-left:10px;">FACEBOOK</span>
+                    </button>
+                </div>
+                <div style="position:relative; display: flex; align-items: center;">
+                    <img src="img/google.png" height="28px" width="28px" alt="" style="position: absolute;margin-left:5px;">
+                    <button style="color: #777777;background-color: white;padding:10px 20px;border-radius: 20px;font-size: 14px;"><span style="margin-left:20px;">GOOGLE</span></button>
+                </div>
+            </div>
+            <div style="display: flex;border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;align-items:center; background-color: #f0f0f0;padding:20px; justify-content: center; color: #777777">Have an Account? <br><h5 style="color:#202b30;margin:0; font-size:15px; cursor: pointer;"> LOG IN</h5>
+            </div>
+        </div>
+    </div>
+    <div class="popuptext" id="myLoginPopup" style="font-family: museo-sans-rounded,sans-serif!important;">
+        <div style="background-color: white;box-shadow:0px 0px 20px 10px #202b307d;margin-top:calc(50% - 600px); margin-left:calc(50% - 179px); width: max-content; border-radius:5px; cursor: pointer">
+            <div style="margin-top:-12px; margin-left: calc(100% - 12px);" onclick="leaveLogIn()">
+                <svg class="feather7 feather-x-circle sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="1351">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </div>
+            <div style="border-bottom:solid 2px #dadada; margin:20px 25px;"><h1>Log In</h1>
+                <table class="popup-table" cellpadding="15" border="2" style="text-align:left;background-color:#f0f0f0;border-collapse:collapse;border-radius:5px;border-style: hidden;box-shadow:0 0 0 2px #dadada;font-size:17px;font-weight: 600" cellspacing="0">
+                    <tr>
+                        <td style="border: 1px solid #dadada;display: flex;">
+                            <label for="">Email</label><input class="popupinput" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #dadada;display: flex; align-items: center;">
+                            <label for="">Password</label><input class="popupinput" type="PASSWORD"> <a href="" style="color:gray;font-size:13px; font-weight: 100;">FORGOT?</a></td>
+                    </tr>
+                </table>
+                <button class="signup-button">LOG IN</button></div>
+            <div style="margin:15px 0;display:flex; justify-content: space-evenly;">
+                <div style="position: relative;">
+                    <svg style="position: absolute;top:calc(50% - 9px); margin-left:5px;" class="feather6 feather-facebook sc-iwsKbI cnlcoQ" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="511">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    <button style="color: white;background-color: #3b579d;padding:10px 20px;border-radius: 20px;font-size: 14px;">
+                        <span style="margin-left:10px;">FACEBOOK</span>
+                    </button>
+                </div>
+                <div style="position:relative; display: flex; align-items: center;">
+                    <img src="img/google.png" height="28px" width="28px" alt="" style="position: absolute;margin-left:5px;">
+                    <button style="color: #777777;background-color: white;padding:10px 20px;border-radius: 20px;font-size: 14px;"><span style="margin-left:20px;">GOOGLE</span></button>
+                </div>
+            </div>
+            <div style="display: flex;border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;align-items:center; background-color: #f0f0f0;padding:20px; justify-content: center; color: #777777">Don't have an account? <br><h5 style="color:#202b30;margin:0; font-size:15px; cursor: pointer;"> SING UP</h5>
+            </div>
+        </div>
+    </div>
     <div>
         <div class="nav-bar">
             <p class="contact-info">Tel: 0897 2537890 | Mail: info@domain.com</p>
@@ -26,18 +112,36 @@
                     </td>
                     <td class="route-links"><a href="index.html">HOMEPAGE</a>
                     </td>
-                    <td class="route-links">
-                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px;"><a href="language.html">LANGUAGES</a>
-                            <svg class="feather5 feather-chevrons-down sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <td class="route-links" onclick="dropdownMenu()">
+                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
+                            <p>LANGUAGES</p>
+                            <svg id="chevdown1" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <polyline points="7 13 12 18 17 13"></polyline>
                                 <polyline points="7 6 12 11 17 6"></polyline>
-                            </svg></div>
+                            </svg>
+                            <svg id="chevup1" class="feather5 feather-chevrons-up1 sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="17 11 12 6 7 11"></polyline>
+                                <polyline points="17 18 12 13 7 18"></polyline>
+                            </svg>
+                        </div>
+                        <div id="dropdownMenu" style="display: none">
+                            <a class="langs" href="">French</a>
+                            <a class="langs" href="">German</a>
+                            <a class="langs" href="">English</a>
+                            <a class="langs" href="">Spanish</a>
+                            <a class="langs" href="">Korean</a>
+                            <a class="langs" href="">Japanese</a>
+                        </div>
                     </td>
-                    <td class="route-links"><a href="articles.html">ARTICLES</a>
+                    <td class="route-links"><a href="articles.html">CONTACT</a>
                     </td>
-                    <td class="route-links"><a href="contact.html">CONTACT</a>
+                    <td class="route-links">
+                        <div class="signup" style="color: white" onclick="signUp()">SIGN UP
+                        </div>
                     </td>
-                    <td class="route-links"><a href="login.html">SIGN UP/LOG IN</a>
+                    <td class="route-links">
+                        <div class="signup" style="color: white" onclick="logIn()">LOG IN
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -72,7 +176,7 @@
                 </div>
                 <div class="black" style="height: 238px; filter:blur(5px);z-index: 0;"></div>
             </div>
-             <div class="photosection fade" style="display: none">
+            <div class="photosection fade" style="display: none">
                 <img style="width: 100%;" src="../html/img/spanish.jpg" alt="">
                 <div class="black">
                     <p class="textdeco">Learn Languages for Free!</p>
@@ -81,7 +185,7 @@
                 </div>
                 <div class="black" style="height: 238px; filter:blur(5px);z-index: 0;"></div>
             </div>
-             <div class="photosection fade" style="display: none">
+            <div class="photosection fade" style="display: none">
                 <img style="width: 100%;" src="../html/img/korean.jpg" alt="">
                 <div class="black">
                     <p class="textdeco">Learn Languages for Free!</p>
@@ -90,7 +194,7 @@
                 </div>
                 <div class="black" style="height: 238px; filter:blur(5px);z-index: 0;"></div>
             </div>
-             <div class="photosection fade" style="display: none">
+            <div class="photosection fade" style="display: none">
                 <img style="width: 100%;" src="../html/img/japanese.jpg" alt="">
                 <div class="black">
                     <p class="textdeco">Learn Languages for Free!</p>
@@ -106,37 +210,37 @@
                             <button onclick="currentSlide(1)" class="slideshowButton">
                                 <img src="../html/img/french.svg">
                             </button>
-                            <p>French</p>
+                                <p>French</p>
                         </td>
                         <td class="click-to-slide">
                             <button onclick="currentSlide(2)" class="slideshowButton">
-                            <img src="../html/img/german.svg">
+                                <img src="../html/img/german.svg">
                             </button>
-                            <p>German</p>
+                                <p>German</p>
                         </td>
                         <td class="click-to-slide">
                             <button onclick="currentSlide(3)" class="slideshowButton">
                                 <img src="../html/img/italian.svg">
                             </button>
-                            <p>Italian</p>
+                                <p>Italian</p>
                         </td>
                         <td class="click-to-slide">
                             <button onclick="currentSlide(4)" class="slideshowButton">
                                 <img src="../html/img/spanish.svg">
                             </button>
-                            <p>Spanish</p>
+                                <p>Spanish</p>
                         </td>
                         <td class="click-to-slide">
                             <button onclick="currentSlide(5)" class="slideshowButton">
                                 <img src="../html/img/korean.svg">
                             </button>
-                            <p>Korean</p>
+                                <p>Korean</p>
                         </td>
                         <td class="click-to-slide">
                             <button onclick="currentSlide(6)" class="slideshowButton">
                                 <img src="../html/img/japanese.svg">
                             </button>
-                            <p>Japanese</p>
+                                <p>Japanese</p>
                         </td>
                     </tr>
                 </table>
@@ -188,9 +292,6 @@
                             <polyline points="6 17 11 12 6 7"></polyline>
                         </svg>
                         <a class="quick-links" href="">Contact</a></li>
-                 
-                    
-                    
                     <li></li>
                 </ul>
                 <ul>
@@ -252,11 +353,11 @@
                                 tempor incididunt ut labore et dolore magna aliqua.</p>
                             <p>
                                 <a class="Tour" href="">View All</a>
-                                <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <polyline points="13 17 18 12 13 7"></polyline>
-                                    <polyline points="6 17 11 12 6 7"></polyline>
-                                </svg>
-                            </p>
+                        <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="13 17 18 12 13 7"></polyline>
+                            <polyline points="6 17 11 12 6 7"></polyline>
+                        </svg>
+                    </p>
                 </ul>
                 <ul class="item-ul">
                     <h4>Upcoming Events</h4>
@@ -326,7 +427,10 @@
                     <polyline points="7 13 12 18 17 13"></polyline>
                     <polyline points="7 6 12 11 17 6"></polyline>
                 </svg>
-                <svg id="feather-chevrons-up" class="feather3 feather-chevrons-up sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+                <svg id="feather-chevrons-up" class="feather3 feather-chevrons-up sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="17 11 12 6 7 11"></polyline>
+                    <polyline points="17 18 12 13 7 18"></polyline>
+                </svg>
             </div>
             <div id="hidden" style="display: none;">
                 <div class="column">
