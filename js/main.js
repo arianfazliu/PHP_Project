@@ -40,8 +40,6 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-
-
 function dropdownMenu() {
     var menu = document.getElementById("dropdownMenu");
     var chvrd = document.getElementById("chevdown1")
@@ -58,22 +56,3 @@ function dropdownMenu() {
     }
 }
 
-function signUp() {
-  var popup = document.getElementById("myPopup");
-  popup.style.display="flex";
-  popup.style.flexDirection = "column";
-}
-function leaveSignUp(){
-  var popup = document.getElementById("myPopup");
-  popup.style.display="none";
-}
-
-function logIn() {
-  var popup2 = document.getElementById("myLoginPopup");
-  popup2.style.display="flex";
-  popup2.style.flexDirection = "column";
-}
-function leaveLogIn(){
-  var popup2 = document.getElementById("myLoginPopup");
-  popup2.style.display="none";
-}
