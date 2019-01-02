@@ -13,10 +13,20 @@ function showPanel() {
     }
 }
 
+//manual and automatic slideshow
 var slideIndex = 1;
-showSlides(slideIndex);
+var timer = null;
+window.onload = function() {
+    showSlides(slideIndex);
+}
+
+function plusSlides(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex += n);
+}
 
 function currentSlide(n) {
+    clearTimeout(timer);
     showSlides(slideIndex = n);
 }
 
@@ -24,12 +34,9 @@ function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("photosection");
     var dots = document.getElementsByClassName("slideshowButton");
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
+    if (n == undefined) { n = ++slideIndex }
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -38,8 +45,9 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
+    timer = setTimeout(showSlides, 3000);
 }
-
+//menuja
 function dropdownMenu() {
     var menu = document.getElementById("dropdownMenu");
     var chvrd = document.getElementById("chevdown1")
@@ -47,12 +55,11 @@ function dropdownMenu() {
     if (menu.style.display == "none") {
         menu.style.display = "flex";
         menu.style.flexDirection = "column";
-        chvrd.style.display="none";
-        chvru.style.display="flex";
+        chvrd.style.display = "none";
+        chvru.style.display = "flex";
     } else {
         menu.style.display = "none";
-        chvru.style.display="none";
-        chvrd.style.display="flex";
+        chvru.style.display = "none";
+        chvrd.style.display = "flex";
     }
 }
-
