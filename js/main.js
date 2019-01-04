@@ -45,7 +45,7 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
-    timer = setTimeout(showSlides, 3000);
+    timer = setTimeout(showSlides, 9000);
 }
 //menuja
 function dropdownMenu() {

@@ -7,13 +7,13 @@
     <link rel=icon href=icon1.png>
     <link rel="stylesheet" type="text/css" href="../css/login.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <script type="text/javascript" src="../js/login.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
 </head>
 
 <body>
-    <form action="homepage.html" class="popuptext" id="myLoginPopup" style="font-family: museo-sans-rounded,sans-serif!important;">
-        <div style="background-color: white;box-shadow:0px 0px 20px 10px #202b307d;margin-top:calc(50% - 600px); margin-left:calc(50% - 179px); width: max-content; border-radius:5px; cursor: pointer">
+    <form  class="popuptext" id="myLoginPopup" style="font-family: museo-sans-rounded,sans-serif!important;">
+        <div style="background-color: white;box-shadow:0px 0px 20px 10px #202b307d; position:absolute;top: calc(50% - 203.44px);    left: calc(50% - 214px); width: max-content; border-radius:5px; cursor: pointer">
             <div style="margin-top:-12px; margin-left: calc(100% - 12px);" onclick="leaveLogIn()">
                 <svg class="feather7 feather-x-circle sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="1351">
                     <circle cx="12" cy="12" r="10"></circle>
@@ -25,14 +25,14 @@
                 <table class="popup-table" cellpadding="15" border="2" style="text-align:left;background-color:#f0f0f0;border-collapse:collapse;border-radius:5px;border-style: hidden;box-shadow:0 0 0 2px #dadada;font-size:17px;font-weight: 600" cellspacing="0">
                     <tr>
                         <td style="border: 1px solid #dadada;display: flex;">
-                            <label for="">Email</label><input class="popupinput" required name="email" value="" type="email"></td>
+                            <label for="">Email</label><input class="popupinput" id="loginusername" required name="email" value="" type="email"></td>
                     </tr>
                     <tr>
                         <td style="border: 1px solid #dadada;display: flex;align-items: center;">
-                            <label for="">Password</label><input class="popupinput" required minlength="8" name="password" value="" type="PASSWORD"> <a href="" style="color:gray;font-size:13px; font-weight: 100;">FORGOT?</a></td>
+                            <label for="">Password</label><input class="popupinput" id="loginpassword" required minlength="8" name="password" value="" type="PASSWORD"> <a href="" style="color:gray;font-size:13px; font-weight: 100;">FORGOT?</a></td>
                     </tr>
                 </table>
-                <input type="submit" value="LOG IN" style="cursor:pointer;outline: none" class="signup-button">
+                <input type="submit"  value="LOG IN" style="cursor:pointer;outline: none" class="signup-button">
             </div>
             <div style="margin:15px 0;display:flex; justify-content: space-evenly;">
                 <div style="position: relative;">
@@ -40,7 +40,7 @@
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg>
                     <button onclick="toFacebook()" style="color: white;background-color: #3b579d;padding:10px 20px;border-radius: 20px;font-size: 14px;">
-                        <span style="margin-left:10px;">FACEBOOK</span>
+                        <a href="homepage.html"  style="margin-left:10px;">FACEBOOK</a>
                     </button>
                 </div>
                 <div style="position:relative; display: flex; align-items: center;">
@@ -67,27 +67,6 @@
                         <p class="contact-info">Free language learning and resources</p>
                     </td>
                     <td class="route-links"><a href="index.html">HOMEPAGE</a>
-                    </td>
-                    <td class="route-links" onclick="dropdownMenu()">
-                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
-                            <p>LANGUAGES</p>
-                            <svg id="chevdown1" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <polyline points="7 13 12 18 17 13"></polyline>
-                                <polyline points="7 6 12 11 17 6"></polyline>
-                            </svg>
-                            <svg id="chevup1" class="feather5 feather-chevrons-up1 sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <polyline points="17 11 12 6 7 11"></polyline>
-                                <polyline points="17 18 12 13 7 18"></polyline>
-                            </svg>
-                        </div>
-                        <div id="dropdownMenu" style="display: none">
-                            <a class="langs" href="french.html">French</a>
-                            <a class="langs" href="german.html">German</a>
-                            <a class="langs" href="english.html">English</a>
-                            <a class="langs" href="spanish.html">Spanish</a>
-                            <a class="langs" href="korean.html">Korean</a>
-                            <a class="langs" href="japanese.html">Japanese</a>
-                        </div>
                     </td>
                     <td class="route-links"><a href="articles.html">CONTACT</a>
                     </td>
