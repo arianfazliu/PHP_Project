@@ -7,7 +7,7 @@
     <link rel=icon href=icon1.png>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/thequiz.css">
-    <script type="text/javascript" src="../js/thequiz.js"></script>
+    <script type="text/javascript" src="../js/thefrenchquiz.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
 </head>
@@ -52,7 +52,22 @@
                     </td>
                     <td class="route-links"><a href="homepage.html">CONTACT</a>
                     </td>
-                    <td class="route-links"><a href="thequiz.html">QUIZZES</a>
+                    <td class="route-links" onclick="dropdownMenu2()">
+                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
+                            <p>QUIZZES</p>
+                            <svg id="chevdown2" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="7 13 12 18 17 13"></polyline>
+                                <polyline points="7 6 12 11 17 6"></polyline>
+                            </svg>
+                            <svg id="chevup2" class="feather5 feather-chevrons-up1 sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="17 11 12 6 7 11"></polyline>
+                                <polyline points="17 18 12 13 7 18"></polyline>
+                            </svg>
+                        </div>
+                        <div id="dropdownMenu2" style="display: none">
+                            <a class="langs" href="theenglishquiz.html">Test your English!</a>
+                            <a class="langs" href="thefrenchquiz.html">Test your French!</a>
+                        </div>
                     </td>
                     <td class="route-links">
                         <a href="index.html">LOG OUT</a>
@@ -64,7 +79,7 @@
         </div>
     </div>
     <div class="homepage" >
-        <div ><h1>English Quiz!</h1>
+        <div ><h1>French Quiz!</h1>
             <div class="quiz-container">
                 <div id="quiz"></div>
             </div>

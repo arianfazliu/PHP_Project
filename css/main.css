@@ -496,7 +496,7 @@ ul {
     color: lightgray;
 }
 
-#dropdownMenu {
+#dropdownMenu, #dropdownMenu2 {
     background-color: white;
     position: absolute;
     z-index: 10;
@@ -512,7 +512,7 @@ ul {
     display: none;
 }
 
-#dropdownMenu .langs {
+#dropdownMenu .langs, #dropdownMenu2 .langs {
     color: black;
     box-shadow: 0 4px 6px -6px #2f3d44;
     margin: 0;

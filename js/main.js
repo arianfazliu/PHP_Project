@@ -47,11 +47,27 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     timer = setTimeout(showSlides, 9000);
 }
-//menuja
+//gjuhet
 function dropdownMenu() {
     var menu = document.getElementById("dropdownMenu");
     var chvrd = document.getElementById("chevdown1")
     var chvru = document.getElementById("chevup1")
+    if (menu.style.display == "none") {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+        chvrd.style.display = "none";
+        chvru.style.display = "flex";
+    } else {
+        menu.style.display = "none";
+        chvru.style.display = "none";
+        chvrd.style.display = "flex";
+    }
+}
+//kuizet
+function dropdownMenu2() {
+    var menu = document.getElementById("dropdownMenu2");
+    var chvrd = document.getElementById("chevdown2")
+    var chvru = document.getElementById("chevup2")
     if (menu.style.display == "none") {
         menu.style.display = "flex";
         menu.style.flexDirection = "column";

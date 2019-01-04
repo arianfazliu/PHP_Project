@@ -1,52 +1,31 @@
 window.addEventListener("load", function() {
     const myQuestions = [{
-            question: " I ..... tennis every Sunday morning.",
+            question: " What is 'le petit déjeuner'?",
             answers: {
-                a: "playing",
-                b: "play",
-                c: "am playing"
+                a: "breakfast",
+                b: "dinner",
+                c: "lunch"
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "How would you greet someone in French?",
+            answers: {
+                a: "Au revoir.",
+                b: "Bonjour!",
+                c: "Je suis malade."
             },
             correctAnswer: "b"
+        },
+        {
+            question: "What are you asking if you say, 'Parlez-vous anglais?'",
+            answers: {
+                a: "I can't speak English.",
+                b: "where is the nearest bar?",
+                c: "Do you speak English?",
             },
-            {
-                question: " Sorry, she can't come to the phone. She ..... a bath!",
-                answers: {
-                    a: "is having",
-                    b: "having",
-                    c: "have"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: " ..... many times every winter in Frankfurt.",
-                answers: {
-                    a: "It snows",
-                    b: "It snowed",
-                    c: "It is snowing",
-                    d: "It is snow"
-                },
-                correctAnswer: "a"
-            },
-            {
-                question: "Jane: 'What ..... in the evenings?' Mary: 'Usually I watch TV or read a book.'",
-                answers: {
-                    a: "you doing",
-                    b: "you do",
-                    c: "do you do",
-                    d: "are you doing"
-                },
-                correctAnswer: "c"
-            },
-            {
-                question: "Sorry, you can't borrow my pencil. I ..... it myself.",
-                answers: {
-                    a: "was using",
-                    b: "using",
-                    c: "use",
-                    d: "am using"
-                },
-                correctAnswer: "d"
-            }
+            correctAnswer: "c"
+        }
     ];
 
     function buildQuiz() {
@@ -102,32 +81,28 @@ window.addEventListener("load", function() {
                 numCorrect++;
                 // color the answers green
                 answerContainers[questionNumber].style.color = "lightgreen";
-            } else { 
+            } else {
                 // if answer is wrong or blank
                 // color the answers red
                 answerContainers[questionNumber].style.color = "red";
             }
         });
-        var result2 = localStorage.getItem("highestscore");
-        if (result2 !== null) {
-            if (numCorrect > result2) {
-              localStorage.setItem('highestscore', numCorrect);
+        var result = sessionStorage.getItem('highscore');
+        if (result !== null) {
+            if (numCorrect > result) {
+                sessionStorage.setItem('highscore', numCorrect);
             }
-        } else {
-            result2 = numCorrect;
-            localStorage.setItem('highestscore', numCorrect);
+        } else{
+            result = numCorrect;
+            sessionStorage.setItem('highscore', numCorrect);
         }
-        
-       // console.log(result);
-        console.log(result2);
-        //bestScore.innerHTML = `The best score is: ${result} out of ${myQuestions.length}`;
-        allTimebest.innerHTML = `All time best score is : ${result2} out of ${myQuestions.length}`;
+
+        console.log(result);
+        bestScore.innerHTML = `The best score is: ${result} out of ${myQuestions.length}`;
         // show number of correct answers out of total
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 
     }
-
-
 
     function showSlide(n) {
         slides[CurrentSlide].classList.remove("active-slide");
