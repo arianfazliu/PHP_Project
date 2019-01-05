@@ -7,6 +7,7 @@
     <link rel=icon href=icon1.png>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/canvas.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
 </head>
 
@@ -50,7 +51,7 @@
                     </td>
                     <td class="route-links"><a href="loggedincontact.html">CONTACT</a>
                     </td>
-                    <td id="loggedin"  class="route-links " onclick="dropdownMenu2()">
+                    <td id="loggedin" class="route-links " onclick="dropdownMenu2()">
                         <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
                             <p>QUIZZES</p>
                             <svg id="chevdown2" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -77,51 +78,36 @@
         </div>
     </div>
     <div class="homepage">
-        <div style="position: relative;display: flex;">
-            
-               
-                <form action="homepage.html" style="    width: max-content;
-             height: max-content;
-                margin: 25px 20px 15px 25px;">
-                    <fieldset>
+        <div style="position: relative;display: flex;justify-content: space-evenly;">
+            <form action="homepage.html" style="    width: max-content;height: max-content;margin: 25px 0">
+                <fieldset>
                     <h3 class="contact_title">Contact us</h3>
-
                     <input type="radio" name="gender" value="Suggestions"> Suggestions
                     <input type="radio" name="gender" value="critics"> Critics
                     <input type="radio" name="gender" value="other"> Other <br><br>
-
                     Name and Surname: <br>
-                 <input type="text" name="firstname" value="">
+                    <input type="text" name="firstname" value="">
                     <br> <br>
-                Phone number:<br>
-                <input type="text" name="phonenumber" value=""> <br> <br>
-                Email:<br>
-                <input type="email" name="email" value=""> <br><br>
+                    Phone number:<br>
+                    <input type="text" name="phonenumber" value=""> <br> <br>
+                    Email:<br>
+                    <input type="email" name="email" value=""> <br><br>
+                    <p>Enter the message here: </p>
+                    <textarea name="message" placeholder="Enter the message here" rows="10" cols="27">
 
-
-                <p>Enter the message here: </p>
-
-                
-                    <textarea name="message" placeholder="Enter the message here"  rows="10" cols="27">
-                        
                     </textarea>
-
                     <br><br>
-                    
-
                     <div class="send1">
-                    <button class="send2">
-                        Submit
-                    </button>
-                     </div>
-                        </fieldset>
-                </form> 
-
-                <div style="    width: max-content;
+                        <button class="send2">
+                            Submit
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+            <div style="    width: max-content;
              height: max-content;
-                margin: 25px 20px 15px 0px;" >
+                margin: 25px 0;">
                 <ul>
-                    
                     <img height="270" width="320" src="../html/img/adresa.png">
                     <p class="contact-info" style="font-size: 16px;">174</p>
                     <p class="contact-info" style="font-size: 16px;">Rexhep Krasniqi</p>
@@ -131,121 +117,110 @@
                     <p class="contact-info" style="font-size: 16px;">Tel: 0897 2537890</p>
                     <p class="contact-info" style="font-size: 16px;">Email: contact@domain.com</p>
                 </ul>
-                </div>
-            <div> 
-               <div style=" margin-bottom: 30px;">
+            </div>
+            <div>
+                <div style=" margin-bottom: 30px;">
                     <p class="contact-info" style="font-size: 16px; text-align: center; width: max-content; height: max-content; margin: 25px 20px 0px 25px;">
-                    Click the button to get your coordinates.</p>
-
-                                    <div class="send1">
-                                    <button  onclick="getLocation()" class="send2">
-                                     Get coordinates
-                                        </button>
-                                    </div>
-    
-                                         <p id="demo"></p></div>
-                        <div style="border-top: dashed 2px; "> <br>
-                    <p class="contact-info" style="font-size: 16px; margin-bottom: 11px;">Drag Clannad logo into the rectangle:</p>
-
-                        <div class="drag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                        <br>
-                        <img id="drag1" src="https://the-artifice.com/wp-content/uploads/2012/11/cannedlogo.jpg" alt="W3Schools.com"
-                         draggable="true" ondragstart="drag(event)" width="336" height="69">
+                        Click the button to get your coordinates.</p>
+                    <div class="send1">
+                        <button onclick="getLocation()" class="send2">
+                            Get coordinates
+                        </button>
                     </div>
+                    <p id="demo"></p>
+                </div>
+                <div style="border-top: dashed 2px; "> <br>
+                    <p class="contact-info" style="text-align:center;font-size: 16px; margin-bottom: 11px;">Drag Clannad logo into the rectangle:</p>
+                    <div class="drag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <br>
+                    <img id="drag1" src="https://the-artifice.com/wp-content/uploads/2012/11/cannedlogo.jpg" alt="W3Schools.com"
+                         draggable="true" ondragstart="drag(event)" width="336" height="69">
+                </div>
+                <div style="display: flex;border-top: dashed 2px;flex-direction: column;  align-items: center;justify-content: center; margin-top:30px;">
+                        <h2 class="contact-info" style="font-size: 16px; margin:15px 0;">CANVAS HERE</h2><canvas id="myCanvas" height=200 width=200 style="border:1px solid #000000;"></canvas></div>
+                </div>
             </div>
-        </div>
-
-
-        <div class="footer">
-            <div class="footer1" onclick="showPanel();">
-                <p href="">CLICK TO OPEN SLIDE PANEL</p>
-                <svg id="feather-chevrons-down" class="feather3 feather-chevrons-down sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="286" style="display: none; margin-left:5px;">
-                    <polyline points="7 13 12 18 17 13"></polyline>
-                    <polyline points="7 6 12 11 17 6"></polyline>
-                </svg>
-                <svg id="feather-chevrons-up" class="feather3 feather-chevrons-up sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:flex;margin-left:5px;" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="17 11 12 6 7 11"></polyline>
-                    <polyline points="17 18 12 13 7 18"></polyline>
-                </svg>
-            </div>
-            <div id="hidden" style="display: flex;">
-                <div class="column">
-                    <h5 class="footer-list-elements"
+            <div class="footer">
+                <div class="footer1" onclick="showPanel();">
+                    <p href="">CLICK TO OPEN SLIDE PANEL</p>
+                    <svg id="feather-chevrons-down" class="feather3 feather-chevrons-down sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="286" style="margin-left:5px;">
+                        <polyline points="7 13 12 18 17 13"></polyline>
+                        <polyline points="7 6 12 11 17 6"></polyline>
+                    </svg>
+                    <svg id="feather-chevrons-up" class="feather3 feather-chevrons-up sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="17 11 12 6 7 11"></polyline>
+                        <polyline points="17 18 12 13 7 18"></polyline>
+                    </svg>
+                </div>
+                <div id="hidden" style="display: none;">
+                    <div class="column">
+                        <h5 class="footer-list-elements"
                     >ADMINISTRATION</h5>
-                    <ul>
-                        <li>
-                            <a class="footer-links" "href=""> Disclaimer</a>
+                        <ul>
+                            <li>
+                                <a class="footer-links" "href=""> Disclaimer</a>
                             </li>
                             <li>
                                 <a class="footer-links" href="">Accessibility</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Freedom of Information</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Website Privacy</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Press Information</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Annual Report</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Financial Statements</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Job Vacancies</a>
-                        </li>
-                        <li>
-                            <a class="footer-links" href="">Semester Dates</a>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Freedom of Information</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Website Privacy</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Press Information</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Annual Report</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Financial Statements</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Job Vacancies</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Semester Dates</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h5 class="footer-list-elements">FRANCE IS....</h5>
+                        <p class="footer-text">France is the world’s most popular tourist destination. Some 83.7 million visitors arrived in France, according to the World Tourism Organization report published in 2014, making it the world’s most-visited country.</p>
+                    </div>
+                    <div class="column">
+                        <h5 class="footer-list-elements">A FACT ABOUT UK</h5>
+                        <p class="footer-text">The United Kingdom runs under a unitary parliamentary constitutional monarchy, while the head of state being Queen Elizabeth II.</p>
+                    </div>
+                    <div class="column">
+                        <h5 class="footer-list-elements">FUN FACT ABOUT SPAIN</h5>
+                        <p class="footer-text">The first of our fun facts about Spain is that Madrid is not only the capital of Spain. It is also the geographical center of the country. And in the center of Madrid you can find the Puerta del Sol ("The Sun Gate"), which is the center of the country and the Spanish radial road system. </p>
+                    </div>
+                    <div class="column">
+                        <h5 class="footer-list-elements">The busiest air route on Earth is there</h5>
+                        <p class="footer-text">The most crowded flight path on Earth is found in South Korea. It is the 280-mile hop from Seoul to Jeju International.</p>
+                    </div>
+                    <div class="column">
+                        <h5 class="footer-list-elements">THERE ARE MORE SENIORS THAN KIDS</h5>
+                        <p class="footer-text">A pretty sad fact about Japan because it’s actually a big problem and there’s a lack of childbirth. The people don’t have time or money to have a family in today’s Japanese Society. And this has led to the situation where there are more seniors than children.</p>
+                    </div>
                 </div>
-                <div class="column">
-                    <h5 class="footer-list-elements">TEXT BLOCK 1</h5>
-                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                <div class="bottom-footer">
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="copyright"> Copyright &copy; 2018 - All Rights Reserved - Domain Name</p>
+                            </td>
+                            <td>
+                                <p class="copyright" style="text-align: right;">Template by Clannad &trade;</p>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="column">
-                    <h5 class="footer-list-elements">TEXT BLOCK 2</h5>
-                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                </div>
-                <div class="column">
-                    <h5 class="footer-list-elements">TEXT BLOCK 3</h5>
-                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                </div>
-                <div class="column">
-                    <h5 class="footer-list-elements">TEXT BLOCK 4</h5>
-                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                </div>
-                <div class="column">
-                    <h5 class="footer-list-elements">TEXT BLOCK 5</h5>
-                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                </div>
-            </div>
-            <div class="bottom-footer">
-                <table>
-                    <tr>
-                        <td>
-                            <p class="copyright"> Copyright &copy; 2018 - All Rights Reserved - Domain Name</p>
-                        </td>
-                        <td>
-                            <p class="copyright" style="text-align: right;">Template by Clannad &trade;</p>
-                        </td>
-                    </tr>
-                </table>
             </div>
         </div>
-    </div>
 </body>
+
 </html>
