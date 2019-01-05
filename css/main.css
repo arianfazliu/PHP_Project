@@ -529,3 +529,114 @@ ul {
     -ms-user-select: none;
     user-select: none;
 }
+
+.send1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.send2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 110px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 31px;
+
+  font-family: Ubuntu-Bold;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.send2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: rgb(70,92,99);
+  pointer-events: none;
+  
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.send2:hover:before {
+  background-color: rgb(28,44,50);
+  width: calc(100% + 20px);
+}
+
+.label-input100 {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.5;
+  text-transform: uppercase;
+  width: 100%;
+
+  padding-bottom: 11px;
+}
+
+  .wrap-input100 {
+  width: 100%;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin-bottom: 34px
+}
+
+@font-face{
+    font-family: "Fontim";
+    src: url(magic.woff);
+}
+
+
+
+.contact_title{
+    font-family: "Fontim";
+    text-shadow: 10px 10px 10px #B2C9D5;
+    font-size: 20px;
+    text-align: center;
+}
+
+.drag {
+
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+

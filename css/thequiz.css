@@ -46,9 +46,13 @@ button:hover{
     background-color: #38a;
 }
 
-
-
-
+.inputi{
+  outline: none;
+  padding: 5px 10px;
+  border-radius:5px;
+  font-size: 16px;
+  margin-top:20px;
+}
 
 .slide{
   position: absolute;
@@ -65,6 +69,6 @@ button:hover{
 }
 .quiz-container{
   position: relative;
-  height: 200px;
+  height: 230px;
   margin-top: 40px;
 }

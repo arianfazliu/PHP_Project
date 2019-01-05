@@ -5,14 +5,13 @@ function leaveLogIn() {
 }
 $(document).ready(function() {
     $("form").submit(function() {
-        if ($("#loginusername").val() == 'selimi.aurora@gmail.com' && $("#loginpassword").val() == 'password') {
+        if ($("#loginusername").val() == 'selimi.aurora@gmail.com' || $("#loginusername").val() == 'aritaberisha99@gmail.com' || $("#loginusername").val() == 'arianfazliu.aa@gmail.com' && $("#loginpassword").val() == 'password') {
 			document.getElementById("myLoginPopup").action = "homepage.html";
         } else {
             alert("Error password or email!");
         }
     });
 });
-
 
 function toFacebook() {
     window.location.href = "homepage.html";
