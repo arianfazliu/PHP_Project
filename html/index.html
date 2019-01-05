@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en" manifest="appcashe.manifest">
+=======
 <html lang="en" manifest="site.manifest">
+>>>>>>> 75f74e6977d811a9db7fc0908824a1810b5068c4
 
 <head>
     <meta charset="UTF-8">
@@ -19,11 +23,11 @@
                 <svg class="feather feather-search sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="1006"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </span>
         </div>
-        <div class="table">
+        <div class="table" id="backgroundColor">
             <table>
                 <tr>
                     <td class="route-links"><a href="" style="font-size: 20px"><h2>C</h2>LANNAD</a>
-                        <p class="contact-info">Free language learning and resources</p>
+                        <p class="contact-info">Approved by <abbr title="World Language Organization">WLO</abbr></p>
                     </td>
                     <td class="route-links"><a href="index.html">HOMEPAGE</a>
                     </td>
@@ -114,7 +118,7 @@
                             <button onclick="currentSlide(3)" class="slideshowButton">
                                 <img src="../html/img/italian.svg">
                             </button>
-                                <p>Italian</p>
+                                <p>English</p>
                         </td>
                         <td class="click-to-slide">
                             <button onclick="currentSlide(4)" class="slideshowButton">
@@ -138,55 +142,41 @@
                 </table>
             </div>
         </div>
-        <div class="grid-container">
+               <div class="grid-container">
             <div class="item1">
                 <ul>
                     <h4>Mini Guide</h4>
-                    <li><svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="13 17 18 12 13 7"></polyline>
-                            <polyline points="6 17 11 12 6 7"></polyline>
-                        </svg>
-                        <a class="quick-links" href="">News</a>
-                    </li>
+                    
                     <li>
                         <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="13 17 18 12 13 7"></polyline>
                             <polyline points="6 17 11 12 6 7"></polyline>
                         </svg>
-                        <a class="quick-links" href="">Tips</a></li>
+                        <a href="#tips" class="quick-links" onclick="comeIntoView()">Tips</a></li>
                     <li>
                         <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="13 17 18 12 13 7"></polyline>
                             <polyline points="6 17 11 12 6 7"></polyline>
                         </svg>
-                        <a class="quick-links" href="">Fun!</a></li>
-                    <li>
-                        <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="13 17 18 12 13 7"></polyline>
-                            <polyline points="6 17 11 12 6 7"></polyline>
-                        </svg>
-                        <a class="quick-links" href="">Games</a></li>
+                        <a class="quick-links" href="#learners" onclick="comeIntoView1()">Language Learners</a></li>
                     <li>
                         <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="13 17 18 12 13 7"></polyline>
                             <polyline points="6 17 11 12 6 7"></polyline>
                         </svg>
                         <a class="quick-links" href="contact.html">Map and Directions</a></li>
-                    <li>
-                        <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="13 17 18 12 13 7"></polyline>
-                            <polyline points="6 17 11 12 6 7"></polyline>
-                        </svg>
-                        <a class="quick-links" href="">Our Team</a></li>
+
                     <li>
                         <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="13 17 18 12 13 7"></polyline>
                             <polyline points="6 17 11 12 6 7"></polyline>
                         </svg>
                         <a class="quick-links" href="contact.html">Contact</a></li>
+
                     <li></li>
                 </ul>
                 <ul>
+                    <address>
                     <h4>How To Find Us</h4>
                     <img height="150" width="200" src="../html/img/adresa.png">
                     <p class="contact-info">174</p>
@@ -196,7 +186,10 @@
                     <br>
                     <p class="contact-info">Tel: 0897 2537890</p>
                     <p class="contact-info">Email: contact@domain.com</p>
-                </ul>
+                    <br>
+                    <p class="contact-info" style="font-size: 10px; word-break: break-all;max-width: 150px" id="date"></p>
+                </address>
+            </ul>
             </div>
             <div class="item2">
                 <ul class="item-ul">
@@ -204,99 +197,96 @@
                     <div class="foto1border1" style="height: 170px">
                         <div class="foto1border2" style="height: 168px">
                             <div class="foto1border3" style="height: 162px">
-                                <img src="">
+                                <img src="../html/img/globe.jpg" width="100%" height="100%">
                             </div>
                             </div>
                         </div>
-                        <p class="textinfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. </p>
+                        <p class="textinfo">Reasons to Learn a New Language:
+1) You can read more fanfiction
+
+2) You can talk to more people; therefore, you can roast more people
+
+3) New opportunities for puns
+
+4) You’ll be able to listen to and understand more music </p>
                         <p>
-                            <a class="Tour" href="">Take the tour</a>
-                            <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <polyline points="13 17 18 12 13 7"></polyline>
-                                <polyline points="6 17 11 12 6 7"></polyline>
-                            </svg>
+                            
                         </p>
                 </ul>
-                <ul class="item-ul">
-                    <h4>Language learner</h4>
-                    <p class="textinfo" style="font-style: normal;"> Nov 28:<a href="https://www.linguacore.com/blog/author/kevin-morehouse/"><strong class="Rugby"> Kevin Morehouse</strong></p>
+                <ul class="item-ul" id="learners">
+                    <h4>Language learners</h4>
+                    <p class="textinfo" style="font-style: normal;"> Nov 28:<strong class="Rugby"> Kevin Morehouse</strong></p>
                     <div class="foto1border1">
                         <div class="foto1border2">
                             <div class="foto1border3">
-                                <img src="">
+                                <img src="../html/img/learner.jpg" width="100%" height="100%">
                             </div>
                             </div>
                         </div>
                         <p class="textinfo">I’m a language learner, just like you. And I’ve been one for many, many years.
                                                 Over those years, I’ve turned to myriad online language learning articles to help answer my pressing language learning questions, much like you are doing right now.</p>
                         <p class="textinfo" style="font-style: normal;border-top: 1px solid rgb(215, 219, 224);padding-top: 7px"> Jan 06:
-                            <strong class="Rugby">Volleyball</strong></p>
+                            <strong class="Rugby">Verona Lemon</strong></p>
                         <div class="foto1border1">
                             <div class="foto1border2">
                                 <div class="foto1border3">
-                                    <img src="">
+                                    <img src="../html/img/learner2.jpg" width="100%" height="100%">
                             </div>
                                 </div>
                             </div>
-                            <p class="textinfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="textinfo">Hi I'm Verona and one of my passion in life has always been learning languages. By learning languages you get to know about people's culture!</p>
                             <p>
-                                <a class="Tour" href="">View All</a>
-                        <svg class="feather2 feather-chevrons-right sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#52595c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                
                             <polyline points="13 17 18 12 13 7"></polyline>
                             <polyline points="6 17 11 12 6 7"></polyline>
                         </svg>
                     </p>
                 </ul>
-                <ul class="item-ul">
-                    <h4>Upcoming Events</h4>
-                    <p class="titleevent">Magna Phasellus</p>
-                    <p class="textinfo">Monday 21st January </p>
-                    <p class="textinfo"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
+                <ul class="item-ul" id="tips">
+                    <h4>Tips</h4>
+                    <p class="titleevent"><div style="background-color: #C0DBED;">Fun ways to learn a language</div></p>
+                    <p class="textinfo" >Monday 21st January </p>
+                    <p class="textinfo"> watch netflix in your target language - cartoons and disney films are always a good starting point
+start a podcast about your favourite topic (tv shows, films, games etc.) 
+start a video blog/diary - record yourself on how your day went.
                     </p>
-                    <p class="titleevent" style="font-style: normal;border-top: 1px solid rgb(215, 219, 224);padding-top: 15px">Magna Phasellus</p>
-                    <p class="textinfo">Monday 21st January </p>
-                    <p class="textinfo"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
+                    <p class="titleevent" style="font-style: normal;border-top: 1px solid rgb(215, 219, 224);padding-top: 15px"><div style="background-color: #C0DBED;">Practice writing and spelling.</div></p>
+                    <p class="textinfo" >Monday 21st January </p>
+                    <p class="textinfo"> You can do this by writing daily in a journal. This can also help with forming your own sentences. Simply write about things like what you ate or what you did, or your thoughts in general. The more you write, the more comfortable you will be forming your own sentences.
                     </p>
-                    <p class="titleevent" style="font-style: normal;border-top: 1px solid rgb(215, 219, 224);padding-top: 15px">Magna Phasellus</p>
+                    <p class="titleevent" style="font-style: normal;border-top: 1px solid rgb(215, 219, 224);padding-top: 15px"><div style="background-color: #C0DBED;">Practice daily.</div></p>
                     <p class="textinfo">Monday 21st January </p>
-                    <p class="textinfo"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
+                    <p class="textinfo">  When you do this, you’re bound to remember the information better. If you don’t and you stop studying for too long, there’s a high chance that you’ll forget some of the basics. I would know. It’s happened to me before.
                     </p>
                 </ul>
             </div>
             <div class="item3">
                 <ul class="item-ul">
-                    <h4>Current Students</h4>
+                    <h4>Learn their language</h4>
                     <div class="foto1border1">
                         <div class="foto1border2">
                             <div class="foto1border3">
-                                <img src="">
+                                <img src="../html/img/spanishg.jpg" width="100%" height="100%">
                             </div>
                             </div>
                         </div>
                 </ul>
                 <ul class="item-ul">
-                    <h4>International students</h4>
+                    <h4>Learn their history</h4>
                     <div class="foto1border1">
                         <div class="foto1border2">
                             <div class="foto1border3">
-                                <img src="">
+                                <img src="../html/img/frencgb.jpg" width="100%" height="100%">
                             </div>
                             </div>
                         </div>
                 </ul>
                 <ul class="item-ul">
-                    <h4>Prospective students</h4>
+                    <h4>Learn their culture</h4>
                     <div class="foto1border1">
                         <div class="foto1border2">
                             <div class="foto1border3">
-                                <img src="">
+                                <img src="../html/img/japanesef.jpg" width="100%" height="100%">
                             </div>
                             </div>
                         </div>
@@ -307,9 +297,7 @@
                     <img src="img/Icon.png" >
                     <p>FOLLOW US ON TWITTER</p>
                 </div>
-                <p class="twitterdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris <a href="" style="color: #53d0fb">@name</a> at 5 am </p>
+                <p class="twitterdesc">Twitter is a great way to get in touch with us! We're very active there. You tune in for some questions at <a href="https://twitter.com/duolingo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: #53d0fb">@clannad</a> at 5 pm.</p>
             </div>
         </div>
         <div class="footer">
