@@ -50,7 +50,22 @@
                     </td>
                     <td class="route-links"><a href="homepage.html">CONTACT</a>
                     </td>
-                    <td class="route-links"><a href="thequiz.html">QUIZZES</a>
+                    <td class="route-links" onclick="dropdownMenu2()">
+                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
+                            <p>QUIZZES</p>
+                            <svg id="chevdown2" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="7 13 12 18 17 13"></polyline>
+                                <polyline points="7 6 12 11 17 6"></polyline>
+                            </svg>
+                            <svg id="chevup2" class="feather5 feather-chevrons-up1 sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="17 11 12 6 7 11"></polyline>
+                                <polyline points="17 18 12 13 7 18"></polyline>
+                            </svg>
+                        </div>
+                        <div id="dropdownMenu2" style="display: none">
+                            <a class="langs" href="theenglishquiz.html">Test your English!</a>
+                            <a class="langs" href="thefrenchquiz.html">Test your French!</a>
+                        </div>
                     </td>
                     <td class="route-links">
                         <a href="index.html">LOG OUT</a>
@@ -60,106 +75,86 @@
         </div>
     </div>
     <div class="homepage">
-        <div><p class="lang_title">
-        Spanish</p></div>
+        <div>
+            <p class="lang_title">
+                Spanish</p>
+        </div>
         <div class="lang_list">
             <p class="resource-list">Literature</p>
         </div>
-        
-            <p class="introduction">Salut friend! Looking for some french literature to get your hands on? Well, we got exactly that for you! </p>
-        
+        <p class="introduction">Salut friend! Looking for some french literature to get your hands on? Well, we got exactly that for you! </p>
         <div>
             <ol type="i">
-                <li >French Textbooks</li>
-                    <ol type="1">
-                        <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0071453873?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=0&tag=fluentu-20" style="color: #9BBACB">Easy French Step-by-step</a> by Myrna Bell Rochester -- It introduces more than 300 verbs, presented in order of importance. Verbs are vital when you’re starting out. This textbook will give you a foundation for grammar, vocabulary, all while building off itself chapter by chapter. </li>
-
-                        <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618512926?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=2&tag=fluentu-20" style="color: #9BBACB">Entre Amis</a> by Michael D. Oates -- Many of the modules focus more on oral interactions, teaching through a performance-oriented approach. </li>
-
-                        <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618007482?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=4&tag=fluentu-20" style="color: #9BBACB">Contacts: Langue et culture françaises </a> by Jean-Paul Valette & Rebecca Valette -- This textbook boasts great visuals, important cultural references, help with pronunciation and a useful French-English dictionary in the back, so you don’t have to go craning your neck from textbook to dictionary and back again.</li>
-                        <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618656448?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=6&tag=fluentu-20" style="color: #9BBACB">En bonne forme </a>
+                <li>French Textbooks</li>
+                <ol type="1">
+                    <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0071453873?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=0&tag=fluentu-20" style="color: #9BBACB">Easy French Step-by-step</a> by Myrna Bell Rochester -- It introduces more than 300 verbs, presented in order of importance. Verbs are vital when you’re starting out. This textbook will give you a foundation for grammar, vocabulary, all while building off itself chapter by chapter. </li>
+                    <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618512926?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=2&tag=fluentu-20" style="color: #9BBACB">Entre Amis</a> by Michael D. Oates -- Many of the modules focus more on oral interactions, teaching through a performance-oriented approach. </li>
+                    <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618007482?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=4&tag=fluentu-20" style="color: #9BBACB">Contacts: Langue et culture françaises </a> by Jean-Paul Valette & Rebecca Valette -- This textbook boasts great visuals, important cultural references, help with pronunciation and a useful French-English dictionary in the back, so you don’t have to go craning your neck from textbook to dictionary and back again.</li>
+                    <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618656448?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=6&tag=fluentu-20" style="color: #9BBACB">En bonne forme </a>
                         by Simone Renaud & Dominique van Hooff -- Idioms and slang aplenty! Didn’t think you’d find that in a textbook, did you? This book is serious business.</li>
-                    </ol>
-                    <li>Easy to read Books</li>
-                        <ol type="1">
-                            <li></li>
-
-                            <li></li>
-
-                            <li></li>
-
-                            <li></li>
-                        </ol>
-                    </li></ol>
-
+                </ol>
+                <li>Easy to read Books</li>
+                <ol type="1">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                </li>
             </ol>
-
-
-        <div class="lang_list">
-            <p class="resource-list">Movies</p>
-        </div>
-        
-            <p class="introduction">Salut friend! Looking for some french literature to get your hands on? Well, we got exactly that for you! </p>
-
-        <div>
-            <ol type="i">
-                <li >French Textbooks</li>
-                    <ol type="1">
-                        <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0071453873?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=0&tag=fluentu-20" style="color: #9BBACB">Easy French Step-by-step</a> by Myrna Bell Rochester -- It introduces more than 300 verbs, presented in order of importance. Verbs are vital when you’re starting out. This textbook will give you a foundation for grammar, vocabulary, all while building off itself chapter by chapter. </li>
-
-                        <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618512926?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=2&tag=fluentu-20" style="color: #9BBACB">Entre Amis</a> by Michael D. Oates -- Many of the modules focus more on oral interactions, teaching through a performance-oriented approach. </li>
-
-                        <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618007482?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=4&tag=fluentu-20" style="color: #9BBACB">Contacts: Langue et culture françaises </a> by Jean-Paul Valette & Rebecca Valette -- This textbook boasts great visuals, important cultural references, help with pronunciation and a useful French-English dictionary in the back, so you don’t have to go craning your neck from textbook to dictionary and back again.</li>
-                        <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618656448?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=6&tag=fluentu-20" style="color: #9BBACB">En bonne forme </a>
-                        by Simone Renaud & Dominique van Hooff -- Idioms and slang aplenty! Didn’t think you’d find that in a textbook, did you? This book is serious business.</li>
-                    </ol>
-                    <li>Easy to read Books</li>
-                        <ol type="1">
-                            <li></li>
-
-                            <li></li>
-
-                            <li></li>
-
-                            <li></li>
-                        </ol>
-                    </li></ol>
-
-            </ol></div>
-
+            </ol>
             <div class="lang_list">
-            <p class="resource-list">Misc</p>
-        </div>
-        
+                <p class="resource-list">Movies</p>
+            </div>
             <p class="introduction">Salut friend! Looking for some french literature to get your hands on? Well, we got exactly that for you! </p>
-
-        <div>
-            <ol type="i">
-                <li >French Textbooks</li>
+            <div>
+                <ol type="i">
+                    <li>French Textbooks</li>
                     <ol type="1">
                         <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0071453873?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=0&tag=fluentu-20" style="color: #9BBACB">Easy French Step-by-step</a> by Myrna Bell Rochester -- It introduces more than 300 verbs, presented in order of importance. Verbs are vital when you’re starting out. This textbook will give you a foundation for grammar, vocabulary, all while building off itself chapter by chapter. </li>
-
                         <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618512926?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=2&tag=fluentu-20" style="color: #9BBACB">Entre Amis</a> by Michael D. Oates -- Many of the modules focus more on oral interactions, teaching through a performance-oriented approach. </li>
-
                         <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618007482?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=4&tag=fluentu-20" style="color: #9BBACB">Contacts: Langue et culture françaises </a> by Jean-Paul Valette & Rebecca Valette -- This textbook boasts great visuals, important cultural references, help with pronunciation and a useful French-English dictionary in the back, so you don’t have to go craning your neck from textbook to dictionary and back again.</li>
                         <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618656448?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=6&tag=fluentu-20" style="color: #9BBACB">En bonne forme </a>
-                        by Simone Renaud & Dominique van Hooff -- Idioms and slang aplenty! Didn’t think you’d find that in a textbook, did you? This book is serious business.</li>
+                            by Simone Renaud & Dominique van Hooff -- Idioms and slang aplenty! Didn’t think you’d find that in a textbook, did you? This book is serious business.</li>
                     </ol>
                     <li>Easy to read Books</li>
-                        <ol type="1">
-                            <li></li>
-
-                            <li></li>
-
-                            <li></li>
-
-                            <li></li>
-                        </ol>
-                    </li></ol>
-
-            </ol></div>
-    </div>
-     <div class="footer">
+                    <ol type="1">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    </li>
+                </ol>
+                </ol>
+            </div>
+            <div class="lang_list">
+                <p class="resource-list">Misc</p>
+            </div>
+            <p class="introduction">Salut friend! Looking for some french literature to get your hands on? Well, we got exactly that for you! </p>
+            <div>
+                <ol type="i">
+                    <li>French Textbooks</li>
+                    <ol type="1">
+                        <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0071453873?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=0&tag=fluentu-20" style="color: #9BBACB">Easy French Step-by-step</a> by Myrna Bell Rochester -- It introduces more than 300 verbs, presented in order of importance. Verbs are vital when you’re starting out. This textbook will give you a foundation for grammar, vocabulary, all while building off itself chapter by chapter. </li>
+                        <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618512926?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=2&tag=fluentu-20" style="color: #9BBACB">Entre Amis</a> by Michael D. Oates -- Many of the modules focus more on oral interactions, teaching through a performance-oriented approach. </li>
+                        <li><a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618007482?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=4&tag=fluentu-20" style="color: #9BBACB">Contacts: Langue et culture françaises </a> by Jean-Paul Valette & Rebecca Valette -- This textbook boasts great visuals, important cultural references, help with pronunciation and a useful French-English dictionary in the back, so you don’t have to go craning your neck from textbook to dictionary and back again.</li>
+                        <li> <a href="https://aax-us-east.amazon-adsystem.com/x/c/QpXBBvheANtMGpjrN8SjJaAAAAFoGt9rtgEAAAFKARjofLg/https://assoc-redirect.amazon.com/g/r/https://www.amazon.com/gp/product/0618656448?linkCode=w61&imprToken=6X0NHnu8AMsbBInx3J.SWQ&slotNum=6&tag=fluentu-20" style="color: #9BBACB">En bonne forme </a>
+                            by Simone Renaud & Dominique van Hooff -- Idioms and slang aplenty! Didn’t think you’d find that in a textbook, did you? This book is serious business.</li>
+                    </ol>
+                    <li>Easy to read Books</li>
+                    <ol type="1">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    </li>
+                </ol>
+                </ol>
+            </div>
+        </div>
+        <div class="footer">
             <div class="footer1" onclick="showPanel();">
                 <p href="">CLICK TO OPEN SLIDE PANEL</p>
                 <svg id="feather-chevrons-down" class="feather3 feather-chevrons-down sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="286" style="margin-left:5px;">
