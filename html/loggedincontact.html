@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clannad</title>
+    <link rel=icon href=icon1.png>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="nav-bar">
+            <p class="contact-info">Tel: 0897 2537890 | Mail: info@domain.com</p>
+            <span class="search-input">
+                <input class="input" type="text" placeholder="Search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+                <svg class="feather feather-search sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="1006"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td class="route-links"><a href="" style="font-size: 20px"><h2>C</h2>LANNAD</a>
+                        <p class="contact-info">Free language learning and resources</p>
+                    </td>
+                    <td class="route-links"><a href="homepage.html">HOMEPAGE</a>
+                    </td>
+                    <td class="route-links" onclick="dropdownMenu()">
+                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
+                            <p>LANGUAGES</p>
+                            <svg id="chevdown1" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="7 13 12 18 17 13"></polyline>
+                                <polyline points="7 6 12 11 17 6"></polyline>
+                            </svg>
+                            <svg id="chevup1" class="feather5 feather-chevrons-up1 sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="17 11 12 6 7 11"></polyline>
+                                <polyline points="17 18 12 13 7 18"></polyline>
+                            </svg>
+                        </div>
+                        <div id="dropdownMenu" style="display: none">
+                            <a class="langs" href="french.html">French</a>
+                            <a class="langs" href="german.html">German</a>
+                            <a class="langs" href="english.html">English</a>
+                            <a class="langs" href="spanish.html">Spanish</a>
+                            <a class="langs" href="korean.html">Korean</a>
+                            <a class="langs" href="japanese.html">Japanese</a>
+                        </div>
+                    </td>
+                    <td class="route-links"><a href="loggedincontact.html">CONTACT</a>
+                    </td>
+                    <td id="loggedin"  class="route-links " onclick="dropdownMenu2()">
+                        <div style="display: flex;align-items: center;justify-content: flex-end;width: 140px; color: white">
+                            <p>QUIZZES</p>
+                            <svg id="chevdown2" class="feather5 feather-chevrons-down1 sc-dnqmqq jxshSx" style="margin-left:5px; display: flex;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="7 13 12 18 17 13"></polyline>
+                                <polyline points="7 6 12 11 17 6"></polyline>
+                            </svg>
+                            <svg id="chevup2" class="feather5 feather-chevrons-up1 sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:none;margin-left:5px;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="17 11 12 6 7 11"></polyline>
+                                <polyline points="17 18 12 13 7 18"></polyline>
+                            </svg>
+                        </div>
+                        <div id="dropdownMenu2" style="display: none">
+                            <a class="langs" href="theenglishquiz.html">Test your English!</a>
+                            <a class="langs" href="thefrenchquiz.html">Test your French!</a>
+                        </div>
+                    </td>
+                    <td id="loggedin" class="route-links">
+                        <a href="index.html">LOG OUT</a>
+                        <!--div class="signup" style="color: white" >SIGN UP
+                        </div-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="homepage">
+        <div style="position: relative;display: flex;">
+            
+               
+                <form action="homepage.html" style="    width: max-content;
+             height: max-content;
+                margin: 25px 20px 15px 25px;">
+                    <fieldset>
+                    <h3 class="contact_title">Contact us</h3>
+
+                    <input type="radio" name="gender" value="Suggestions"> Suggestions
+                    <input type="radio" name="gender" value="critics"> Critics
+                    <input type="radio" name="gender" value="other"> Other <br><br>
+
+                    Name and Surname: <br>
+                 <input type="text" name="firstname" value="">
+                    <br> <br>
+                Phone number:<br>
+                <input type="text" name="phonenumber" value=""> <br> <br>
+                Email:<br>
+                <input type="email" name="email" value=""> <br><br>
+
+
+                <p>Enter the message here: </p>
+
+                
+                    <textarea name="message" placeholder="Enter the message here"  rows="10" cols="27">
+                        
+                    </textarea>
+
+                    <br><br>
+                    
+
+                    <div class="send1">
+                    <button class="send2">
+                        Submit
+                    </button>
+                     </div>
+                        </fieldset>
+                </form> 
+
+                <div style="    width: max-content;
+             height: max-content;
+                margin: 25px 20px 15px 0px;" >
+                <ul>
+                    
+                    <img height="270" width="320" src="../html/img/adresa.png">
+                    <p class="contact-info" style="font-size: 16px;">174</p>
+                    <p class="contact-info" style="font-size: 16px;">Rexhep Krasniqi</p>
+                    <p class="contact-info" style="font-size: 16px;">Prishtinë</p>
+                    <p class="contact-info" style="font-size: 16px;">10000</p>
+                    <br>
+                    <p class="contact-info" style="font-size: 16px;">Tel: 0897 2537890</p>
+                    <p class="contact-info" style="font-size: 16px;">Email: contact@domain.com</p>
+                </ul>
+                </div>
+            <div> 
+               <div style=" margin-bottom: 30px;">
+                    <p class="contact-info" style="font-size: 16px; text-align: center; width: max-content; height: max-content; margin: 25px 20px 0px 25px;">
+                    Click the button to get your coordinates.</p>
+
+                                    <div class="send1">
+                                    <button  onclick="getLocation()" class="send2">
+                                     Get coordinates
+                                        </button>
+                                    </div>
+    
+                                         <p id="demo"></p></div>
+                        <div style="border-top: dashed 2px; "> <br>
+                    <p class="contact-info" style="font-size: 16px; margin-bottom: 11px;">Drag Clannad logo into the rectangle:</p>
+
+                        <div class="drag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <br>
+                        <img id="drag1" src="https://the-artifice.com/wp-content/uploads/2012/11/cannedlogo.jpg" alt="W3Schools.com"
+                         draggable="true" ondragstart="drag(event)" width="336" height="69">
+                    </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="footer1" onclick="showPanel();">
+                <p href="">CLICK TO OPEN SLIDE PANEL</p>
+                <svg id="feather-chevrons-down" class="feather3 feather-chevrons-down sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="286" style="display: none; margin-left:5px;">
+                    <polyline points="7 13 12 18 17 13"></polyline>
+                    <polyline points="7 6 12 11 17 6"></polyline>
+                </svg>
+                <svg id="feather-chevrons-up" class="feather3 feather-chevrons-up sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="display:flex;margin-left:5px;" fill="none" stroke="#7d8e95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="17 11 12 6 7 11"></polyline>
+                    <polyline points="17 18 12 13 7 18"></polyline>
+                </svg>
+            </div>
+            <div id="hidden" style="display: flex;">
+                <div class="column">
+                    <h5 class="footer-list-elements"
+                    >ADMINISTRATION</h5>
+                    <ul>
+                        <li>
+                            <a class="footer-links" "href=""> Disclaimer</a>
+                            </li>
+                            <li>
+                                <a class="footer-links" href="">Accessibility</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Freedom of Information</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Website Privacy</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Press Information</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Annual Report</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Financial Statements</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Job Vacancies</a>
+                        </li>
+                        <li>
+                            <a class="footer-links" href="">Semester Dates</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h5 class="footer-list-elements">TEXT BLOCK 1</h5>
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
+                <div class="column">
+                    <h5 class="footer-list-elements">TEXT BLOCK 2</h5>
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
+                <div class="column">
+                    <h5 class="footer-list-elements">TEXT BLOCK 3</h5>
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
+                <div class="column">
+                    <h5 class="footer-list-elements">TEXT BLOCK 4</h5>
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
+                <div class="column">
+                    <h5 class="footer-list-elements">TEXT BLOCK 5</h5>
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <table>
+                    <tr>
+                        <td>
+                            <p class="copyright"> Copyright &copy; 2018 - All Rights Reserved - Domain Name</p>
+                        </td>
+                        <td>
+                            <p class="copyright" style="text-align: right;">Template by Clannad &trade;</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
