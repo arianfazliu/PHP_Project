@@ -1,3 +1,12 @@
+.backgroundpic{
+	background-image: url("../html/img/map.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+
+}
+
+
 @font-face{
 	font-family: "Fontim";
 	src: url(magic.woff);
@@ -19,6 +28,20 @@
 
 	100% {background: #C7D4DA;}
 }
+
+.trans3d{
+	height:30px;
+	width:40px;
+	background-color: #9BBACB;
+	-webkit-transform: rotateZ(270deg);
+  transform: rotateZ(270deg);
+  font-family: "Georgia";
+  color: #656D72;
+  font-size: 12px;
+  text-align: center;
+
+}
+
 
 .lang_list{
 	height: 30px;
@@ -55,3 +78,4 @@
 	font-size: 15px;
 	color: #404345  ;
 	}
+

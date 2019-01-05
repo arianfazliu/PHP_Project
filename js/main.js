@@ -79,3 +79,45 @@ function dropdownMenu2() {
         chvrd.style.display = "flex";
     }
 }
+
+//Ndrrimi i backgroundit pergjate dites
+function updateBackground() {
+    var today= new Date();
+    var hr = today.getHours(); 
+    var body = document.getElementById("backgroundColor");
+      if (hr < 10) {
+        body.style.backgroundColor = "white";
+       
+      } else if (hr>=10 && hr<19) {
+        body.style.backgroundColor = "#4B616F";
+       
+      } else if(hr>=19){
+        body.style.backgroundColor = "black";
+     
+      } 
+}
+
+function comeIntoView(){
+    var tips=document.getElementById("tips");
+    tips.style.boxShadow="6px 6px 5px 1px #4B616F";
+    setTimeout(comeIntoView,2000);
+    
+
+}
+
+function comeIntoView1(){
+    var learners=document.getElementById("learners");
+    learners.style.boxShadow="6px 6px 5px 1px #4B616F ";
+
+
+}
+
+window.onload = function(){
+    date();
+} 
+function date(){
+    var date= new Date();
+    console.log("working");
+    document.getElementById("date").innerHTML=date;
+    console.log("not working");
+}
