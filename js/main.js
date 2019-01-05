@@ -13,6 +13,7 @@ function showPanel() {
     }
 }
 
+
 //manual and automatic slideshow
 var slideIndex = 1;
 var timer = null;

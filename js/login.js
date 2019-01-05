@@ -13,7 +13,6 @@ $(document).ready(function() {
     });
 });
 
-
 function toFacebook() {
     window.location.href = "homepage.html";
 }

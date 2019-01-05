@@ -57,7 +57,6 @@ window.addEventListener("load", function() {
          </div>`
             );
         });
-
         // finally combine our output list into one string of HTML and put it on the page
         quizContainer.innerHTML = output.join(" ");
     }
