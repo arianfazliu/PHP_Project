@@ -21,7 +21,9 @@ button{
     position: relative;
     display: flex;
 }
-
+img{
+    object-fit: cover;
+}
 .contact-info {
     font-size: 12px;
     font-family: "Georgia";

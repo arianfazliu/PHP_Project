@@ -23,7 +23,7 @@
         <div class="table">
             <table>
                 <tr>
-                    <td class="route-links"><a href="" style="font-size: 20px"><h2>C</h2>LANNAD</a>
+                    <td class="route-links"><a href="homepage.html" style="font-size: 20px"><h2>C</h2>LANNAD</a>
                         <p class="contact-info">Free language learning and resources</p>
                     </td>
                     <td class="route-links"><a href="homepage.html">HOMEPAGE</a>
@@ -78,8 +78,8 @@
         </div>
     </div>
     <div class="homepage">
-        <div style="position: relative;display: flex;justify-content: space-evenly;">
-            <form action="homepage.html" style="    width: max-content;height: max-content;margin: 25px 0">
+        <div style="position: relative;display: flex;justify-content: space-evenly; overflow-x: scroll;">
+            <form action="" style="width: max-content;height: max-content;margin: 25px 0">
                 <fieldset>
                     <h3 class="contact_title">Contact us</h3>
                     <input type="radio" name="gender" value="Suggestions"> Suggestions
@@ -98,7 +98,7 @@
                     </textarea>
                     <br><br>
                     <div class="send1">
-                        <button class="send2">
+                        <button class="send2" onclick="alert('Your form has been submited!')">
                             Submit
                         </button>
                     </div>
@@ -136,9 +136,14 @@
                     <img id="drag1" src="https://the-artifice.com/wp-content/uploads/2012/11/cannedlogo.jpg" alt="W3Schools.com"
                          draggable="true" ondragstart="drag(event)" width="336" height="69">
                 </div>
-                <div style="display: flex;border-top: dashed 2px;flex-direction: column;  align-items: center;justify-content: center; margin-top:30px;">
+                    <div style="display: flex;border-top: dashed 2px;flex-direction: column;  align-items: center;justify-content: center; margin-top:30px;">
                         <h2 class="contact-info" style="font-size: 16px; margin:15px 0;">CANVAS HERE</h2><canvas id="myCanvas" height=200 width=200 style="border:1px solid #000000;"></canvas></div>
                 </div>
+            </div>
+            <div>
+                <p>Count numbers: <output id="result"></output></p>
+                <button onclick="startWorker()">Start Worker</button>
+                <button onclick="stopWorker()">Stop Worker</button>
             </div>
             <div class="footer">
                 <div class="footer1" onclick="showPanel();">

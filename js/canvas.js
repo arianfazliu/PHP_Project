@@ -1,7 +1,6 @@
 	// set up initial variables
 
 window.addEventListener('load', function () {
-	console.log("Not qowrking");
     var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
  
