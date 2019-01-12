@@ -73,7 +73,6 @@ window.addEventListener("load", function() {
 
         });
         output.unshift(`<div class="slide"><form id="myForm" style="display:flex; flex-direction:column;">
-        <div class="answers" style="display:none;"></div>
         <label for="name">First Name: <input name="fname" id="emriiDhene" value="" class="inputi" type="text" /></label>
         <label for="surname">Last Name: <input name="lname" id="mbiemriiDhene" value="" class="inputi" type="text" /></label></form></div>`);
         output.push(`<div class="answers" style="display:none;"></div><div class="slide" id="theResults"> </div>`);
@@ -116,7 +115,7 @@ window.addEventListener("load", function() {
         }
 
         // console.log(result);
-        console.log(result2);
+        //console.log(result2);
         // show number of correct answers out of total
         var emri = document.getElementById("emriiDhene").value;
         var mbiemri = document.getElementById("mbiemriiDhene").value;
@@ -124,17 +123,13 @@ window.addEventListener("load", function() {
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         allTimebest.innerHTML = `All time best score is : ${result2} out of ${myQuestions.length}`;
         submitButton.style.display = "none";
-        var regex = /[i-g]/g;
-        var found = emri.match(regex);
-        var regex1 = RegExp('do*');
-        alert("Matched font/s in name : " + found);
-        console.log(regex1.test(emri));
     }
 
     function showSlide(n) {
-        console.log(CurrentSlide);
         slides[CurrentSlide].classList.remove("active-slide");
+        console.log("current slide: " + CurrentSlide);
         slides[n].classList.add("active-slide");
+        console.log("n: " +n);
         CurrentSlide = n;
         if (CurrentSlide === 0) {
             previousButton.style.display = "none";
@@ -178,7 +173,7 @@ window.addEventListener("load", function() {
     const slides = document.querySelectorAll(".slide");
     let CurrentSlide = 0;
 
-    showSlide(0);
+    showSlide(CurrentSlide);
 
     // on submit, show results
     submitButton.addEventListener("click", showResults);

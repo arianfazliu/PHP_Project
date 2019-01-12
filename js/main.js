@@ -14,13 +14,50 @@ function showPanel() {
     }
 }
 
-
 //manual and automatic slideshow
 var slideIndex = 1;
 var timer = null;
+<<<<<<< HEAD
 window.onload = function() {+---------
+=======
+
+window.onload = function() {
+>>>>>>> 219402df0b365f12031053379e31b715a873fe35
     showSlides(slideIndex);
-    console.log(document.referrer);
+
+    //search input regex
+    var input = document.getElementById("search-inputi");
+    var regex = /[d-o]/g;
+    input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            var vleraeinputit = input.value;
+            var n;
+            var mypa1 = document.getElementsByClassName("heyyou");
+            for (n = 0; n < mypa1.length; n++) {
+                var mypa2 = mypa1[n];
+                var mypar = mypa2.innerHTML;
+                var i;
+                var result = [];
+                if (new RegExp(vleraeinputit).test(mypar)) {
+                    var index = mypar.split(" ");
+                    for (i = 0; i < index.length; i++) {
+                        if (vleraeinputit.match(index[i])) {
+                            var h = index[i];
+                            result.push(h);
+                        }
+                    }
+                    var x = result.join(" ");
+                    console.log(x);
+                    var uniqueItems = [...new Set(x)];
+                    console.log(uniqueItems);
+                    mypa2.style.color = "pink";
+                    mypa2.scrollIntoView();
+                    window.scrollBy(0, -100);
+                }
+            }
+        }
+    });
 }
 
 function plusSlides(n) {
@@ -81,7 +118,6 @@ function dropdownMenu2() {
         chvru.style.display = "none";
         chvrd.style.display = "flex";
     }
-
 }
 
 
@@ -89,65 +125,107 @@ function dropdownMenu2() {
 var x = document.getElementById("demo");
 
 function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+        console.log("there must be a problem with the position")
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+    console.log("geolocation not supported ")
+    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
 }
 
 //drag and drop
 function allowDrop(ev) {
-  ev.preventDefault();
+    ev.preventDefault();
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("text", ev.target.id);
 }
 
 function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }
 
 //Ndrrimi i backgroundit pergjate dites
-function updateBackground() {
-    var today= new Date();
-    var hr = today.getHours(); 
+window.addEventListener('load', function() {
+    var today = new Date();
+    var hr = today.getHours();
     var body = document.getElementById("backgroundColor");
-      if (hr < 10) {
-        body.style.backgroundColor = "white";
-       
-      } else if (hr>=10 && hr<19) {
-        body.style.backgroundColor = "#4B616F";
-       
-      } else if(hr>=19){
+    if (hr < 10) {
+        body.style.backgroundColor = "#36434a";
+
+    } else if (hr >= 10 && hr < 19) {
+        body.style.backgroundColor = "#2f3d44";
+
+    } else if (hr >= 19) {
         body.style.backgroundColor = "black";
-     
-      } 
+
+    }
+
+});
+
+function comeIntoView() {
+    var tips = document.getElementById("tips");
+    tips.style.boxShadow = "6px 6px 5px 1px #4B616F";
+    setTimeout(function() { tips.style.boxShadow = 'none'; }, 1000);
 }
 
-function comeIntoView(){
-    var tips=document.getElementById("tips");
-    tips.style.boxShadow="6px 6px 5px 1px #4B616F";
-    setTimeout(comeIntoView,2000);
-    
-
+function comeIntoView1() {
+    var learners = document.getElementById("learners");
+    learners.style.boxShadow = "6px 6px 5px 1px #4B616F ";
+    setTimeout(function() { learners.style.boxShadow = 'none'; }, 1000);
 }
 
-function comeIntoView1(){
-    var learners=document.getElementById("learners");
-    learners.style.boxShadow="6px 6px 5px 1px #4B616F ";
+window.addEventListener('load', function() {
+    function date() {
+        var date = new Date();
+        console.log("working");
+        document.getElementById("date").innerHTML = date;
+    }
+});
 
+//WINDOW START WEB WORKER
 
+/*var w;
+function startWorker() {
+    console.log("punon");
+    if (typeof(Worker) !== "undefined") {
+        if (typeof(w) == "undefined") {
+            w = new Worker("demo_workers.js");
+        }
+        w.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+    }
 }
 
+<<<<<<< HEAD
 window.onload = function(){
     date();gf
 } 
@@ -157,3 +235,9 @@ function date(){
     document.getElementById("date").innerHTML=date;
     console.log("not working");
 }
+=======
+function stopWorker() {
+    w.terminate();
+    w = undefined;
+}*/
+>>>>>>> 219402df0b365f12031053379e31b715a873fe35

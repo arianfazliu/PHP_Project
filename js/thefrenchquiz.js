@@ -49,6 +49,7 @@ window.addEventListener("load", function() {
                 );
             }
 
+
             // add this question and its answers to the output
             output.push(
                 `<div class="slide">
@@ -57,6 +58,11 @@ window.addEventListener("load", function() {
          </div>`
             );
         });
+        output.unshift(`<div class="slide"><form id="myForm" style="display:flex; flex-direction:column;">
+        <label for="name">First Name: <input name="fname" id="emriiDhene" value="" class="inputi" type="text" /></label>
+        <label for="surname">Last Name: <input name="lname" id="mbiemriiDhene" value="" class="inputi" type="text" /></label></form></div>`);
+        output.push(`<div class="answers" style="display:none;"></div><div class="slide" id="theResults"> </div>`);
+
         // finally combine our output list into one string of HTML and put it on the page
         quizContainer.innerHTML = output.join(" ");
     }
@@ -91,33 +97,45 @@ window.addEventListener("load", function() {
             if (numCorrect > result) {
                 sessionStorage.setItem('highscore', numCorrect);
             }
-        } else{
+        } else {
             result = numCorrect;
             sessionStorage.setItem('highscore', numCorrect);
         }
 
         console.log(result);
-        bestScore.innerHTML = `The best score is: ${result} out of ${myQuestions.length}`;
         // show number of correct answers out of total
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        var emri = document.getElementById("emriiDhene").value;
+        var mbiemri = document.getElementById("mbiemriiDhene").value;
+        document.getElementById("theResults").innerHTML = "Results of " + emri + " " + mbiemri + " are : ";
+        resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        bestScore.innerHTML = `The best score is: ${result} out of ${myQuestions.length}`;
+        submitButton.style.display = "none";
 
     }
 
     function showSlide(n) {
         slides[CurrentSlide].classList.remove("active-slide");
+        console.log("current slide: " + CurrentSlide);
         slides[n].classList.add("active-slide");
+        console.log("n: " + n);
         CurrentSlide = n;
-
         if (CurrentSlide === 0) {
             previousButton.style.display = "none";
+            startQuiz.style.display = "inline-block";
+            nextButton.style.display = "none";
+            submitButton.style.display = "none";
         } else {
             previousButton.style.display = "inline-block";
+            startQuiz.style.display = "none";
+            submitButton.style.display = "none";
         }
 
         if (CurrentSlide === slides.length - 1) {
             nextButton.style.display = "none";
+            previousButton.style.display = "none";
             submitButton.style.display = "inline-block";
-        } else {
+        } else if (CurrentSlide !== 0) {
             nextButton.style.display = "inline-block";
             submitButton.style.display = "none";
         }
@@ -140,14 +158,16 @@ window.addEventListener("load", function() {
     buildQuiz();
 
     const previousButton = document.getElementById("previous");
+    const startQuiz = document.getElementById("startQuiz");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
     let CurrentSlide = 0;
 
-    showSlide(0);
+    showSlide(CurrentSlide);
 
     // on submit, show results
     submitButton.addEventListener("click", showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
+    startQuiz.addEventListener("click", showNextSlide);
 });
