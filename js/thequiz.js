@@ -142,7 +142,6 @@ window.addEventListener("load", function() {
             nextButton.style.display = "none";
             submitButton.style.display = "none";
         } else {
-            previousButton.style.display = "inline-block";
             startQuiz.style.display = "none";
             submitButton.style.display = "none";
         }

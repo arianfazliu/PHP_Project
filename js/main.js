@@ -1,3 +1,4 @@
+\
 function showPanel() {
     var hideElement = document.getElementById("hidden");
     var hideSvg1 = document.getElementById("feather-chevrons-down");
@@ -17,7 +18,7 @@ function showPanel() {
 //manual and automatic slideshow
 var slideIndex = 1;
 var timer = null;
-window.onload = function() {
+window.onload = function() {+---------
     showSlides(slideIndex);
     console.log(document.referrer);
 }
@@ -148,7 +149,7 @@ function comeIntoView1(){
 }
 
 window.onload = function(){
-    date();
+    date();gf
 } 
 function date(){
     var date= new Date();
