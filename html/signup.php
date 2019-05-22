@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Clannad</title>
+    <?php include('../php/signupvalidation.php'); ?>
     <link rel=icon href=icon1.png>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/signup.css">
@@ -13,7 +14,7 @@
 
 <body>
     <div class="popuptext" id="myPopup" style="font-family: museo-sans-rounded,sans-serif!important;">
-        <form action="homepage.html" style="position:absolute; background-color: white;box-shadow:0px 0px 20px 10px #202b307d; top: calc(50% - 257.44px);left: calc(50% - 179px); width: max-content; border-radius:5px; cursor: pointer">
+        <form action="" method="post" style="position:absolute; background-color: white;box-shadow:0px 0px 20px 10px #202b307d; top: calc(50% - 257.44px);left: calc(50% - 179px); width: max-content; border-radius:5px; cursor: pointer">
             <div style="margin-top:-12px; margin-left: calc(100% - 12px);" onclick="leaveSignUp()">
                 <svg class="feather7 feather-x-circle sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="1351">
                     <circle cx="12" cy="12" r="10"></circle>
@@ -25,26 +26,43 @@
                 <table class="popup-table" cellpadding="15" border="2" style="text-align:left;background-color:#f0f0f0;border-collapse:collapse;border-radius:5px;border-style: hidden;box-shadow:0 0 0 2px #dadada;font-size:17px;font-weight: 600" cellspacing="0">
                     <tr>
                         <td style="border: 1px solid #dadada; display: flex;">
-                            <label for="">Age</label><input class="popupinput" required name="age" value="" type="number" min="10" max="99"></td>
+                            <label for="">Age</label><input class="popupinput" name="age" type="text" min="10" max="99">
+                            <span  ><?= $age_error ?></span></td>
+                            
                     </tr>
                     <tr>
                         <td style="border: 1px solid #dadada;display: flex;">
-                            <label for="">Name</label><input class="popupinput" required name="emri" value="" type="text"></td>
+                            <label for="">Name</label><input class="popupinput" name="name" type="text">
+                                <span  ><?= $name_error ?></span>
+
+                        </td>
+                            
+                        
                     </tr>
                     <tr>
                         <td style="border: 1px solid #dadada;display: flex;">
-                            <label for="">Email</label><input class="popupinput" required name="email" value="" type="email"></td>
+
+                            <label for="email">Email</label><input class="popupinput"  name="email" type="text">
+                            <span  ><?= $email_error ?></span>
+                        </td>
+
                     </tr>
                     <tr>
                         <td style="border: 1px solid #dadada;display: flex;">
-                            <label for="">Password</label><input minlength="8" class="popupinput" required name="password" value="" type="PASSWORD"></td>
+                            <label for="">Password</label><input minlength="8" class="popupinput" name="password" type="password">
+                            <span  ><?= $password_error ?></span>
+                            </td>
                     </tr>
                 </table>
                 <div style="margin-top:20px; ;display: flex; align-items: center;justify-content: center;">
-                    <input type="radio" style="margin:0px 5px 3px 15px" required name="gender" value="male"> Male<br>
-                    <input type="radio" style="margin:0px 5px 3px 15px" required name="gender" value="female"> Female<br>
-                    <input type="radio" style="margin:0px 5px 3px 15px" required name="gender" value="other"> Other</div>
-                <input type="submit" value="CREATE ACCOUNT" style="cursor:pointer;outline: none" class="signup-button">
+                    <input type="radio" style="margin:0px 5px 3px 15px"  name="gender  " value="male"> Male<br> 
+                    
+                    <input type="radio" style="margin:0px 5px 3px 15px" name="gender" value="female"> Female<br>
+                    
+                    <input type="radio" style="margin:0px 5px 3px 15px" name="gender" value="other"> Other</div>
+                                               
+
+                <input type="submit" value="Submit" style="cursor:pointer;outline: none" class="signup-button">
             </div>
             <div style="margin:15px 0;display:flex; justify-content: space-evenly;">
                 <div style="position: relative;">
