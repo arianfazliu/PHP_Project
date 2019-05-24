@@ -12,13 +12,13 @@
 			$first=$menu[0];
 			foreach ($menu as $row) {
 				if($row==$first){
-					echo "<li><a href=\"index.php?page=$row\"  class=\"spanat active\">$row</a></li>";
+					echo "<li><a href=\"dashboard.php?page=$row\"  class=\"spanat active\">$row</a></li>";
 				}else{
-					echo "<li><a href=\"index.php?page=$row\"  class=\"spanat\">$row</a></li>";
+					echo "<li><a href=\"dashboard.php?page=$row\"  class=\"spanat\">$row</a></li>";
 				}
 			}
 			?>
-			<button class="btn">LOG IN</button>
+			<button onclick="window.location='main.php'" class="btn">LOG OUT</button>
 		</div>
 	</div>
 </body>
@@ -34,6 +34,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding:5px 100px;
+		background-color: white;
+		position: sticky;
+		top:0;
 	}
 	h3{
 		color:#323232;
@@ -61,6 +64,7 @@
 		border-bottom:solid 2px #63cdb7 ;
 	}
 	.btn{
+		cursor: pointer;
 		padding:5px 40px;
 		border:solid 2px #63cdb7;
 		color:#63cdb7;

@@ -31,7 +31,7 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $result = mysqli_query($db, "select * from users where username = '$username' and email = '$email'")
+  $result = mysqli_query($db, "select * from users where username = '$username' or email = '$email'")
                   or die("Failed to query database " .mysqli_error($db));
   $user = mysqli_fetch_array($result);
   if ($user) { // if user exists

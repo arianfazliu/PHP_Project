@@ -63,6 +63,7 @@ span{
 	align-items: center;
 }
 input{
+	cursor: pointer;
 	font-size: 16px;
     font-weight: 300;
     color:#b6bfc3 ;
