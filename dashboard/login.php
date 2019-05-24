@@ -75,6 +75,9 @@ input{
     border: none;
     border-left: solid 2px #f8f9fd;
 }
+input:focus{
+	color:black;
+}
 object{
 	padding: 10px;
 }

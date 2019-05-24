@@ -17,7 +17,7 @@
 					<input  value="<?php echo $username; ?>" placeholder="Username" type="text" name="user" id="user">
 				</div>
 				<div class="inputi">
-					<object type="image/svg+xml" data="../img/mail.svg">
+					<object type="image/svg+xml" data="../img/maili.svg">
 					</object>
 					<input  placeholder="E-mail" value="<?php echo $email; ?>" type="email" name="email" id="email">
 				</div>
@@ -48,7 +48,7 @@
 	</div>
 </body>
 </html>
-<style>
+<style lang="css">
 body,html{
 	margin:0;
 	box-sizing: border-box;
@@ -83,6 +83,9 @@ input{
     width: 100%;
     border: none;
     border-left: solid 2px #f8f9fd;
+}
+input:focus{
+	color:black;
 }
 object{
 	padding: 10px;

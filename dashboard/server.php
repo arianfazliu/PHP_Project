@@ -25,9 +25,13 @@ if (isset($_POST['reg_user'])) {
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (empty($phone)) { array_push($errors, "Phone number is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/", $password_1)) {
+    array_push($errors, "the password does not meet the requirements!");
+  }
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
   }
+ 
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email

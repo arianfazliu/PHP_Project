@@ -4,14 +4,16 @@
 	function getError($var)
 	{	
 		if($var=="required"){
-			echo "<p>The fields are required, please fill in the form! </p>";
+			printf("<p>The fields are required, please fill in the form! </p>");
 		}
 		else if($var=="match"){
-			echo "<p>The two passwords do not match!</p>";
+			printf("<p>The two passwords do not match!</p>");
 		}else if($var=="exists"){
-			echo "<p>Username/email already exists!</p>";
+			printf("<p>Username/email already exists!</p>");
+		}else if(preg_match("/combination/", $var)){
+			printf("<p>Wrong username/password combination!</p>");
 		}else{
-			echo "<p>Wrong username/password combination!</p>";
+			printf("<p>The password does not meet the requirements!</p>");
 		}
 	}
 	foreach($errors as $error)
@@ -26,7 +28,7 @@
 			getError("exists");
 			$first=false;
 		}else{
-			getError("nothing");
+			getError($error);
 			$first=false;
 		}
   	?>

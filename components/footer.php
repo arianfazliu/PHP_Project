@@ -39,6 +39,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding:5px 100px;
+	margin-bottom:0;
 }
 .h3-tefooteri{
 	color:white;
