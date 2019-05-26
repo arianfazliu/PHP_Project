@@ -12,8 +12,10 @@
 			printf("<p>Username/email already exists!</p>");
 		}else if(preg_match("/combination/", $var)){
 			printf("<p>Wrong username/password combination!</p>");
+		}else if(preg_match("/requirements/", $var)){
+			printf("<p>Password requires at least one uppercase, one number and more than 8 characters!</p>");
 		}else{
-			printf("<p>The password does not meet the requirements!</p>");
+			printf("<p>Invalid email format.</p>");
 		}
 	}
 	foreach($errors as $error)

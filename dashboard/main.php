@@ -9,16 +9,18 @@
 			<h2>GET<span class="fluent">FLUENT</span></h2>
 			<div class="nav-right">
 				<?php
-				$menu = array("Home", "Languages", "Prices", "Contact Us");
-				$first=$menu[0];
-				foreach ($menu as $row) {
-					if($row==$first){
-						echo "<li><a href=\"index.php?page=$row\"  class=\"spanat active\">$row</a></li>";
-					}else{
-						echo "<li><a href=\"index.php?page=$row\"  class=\"spanat\">$row</a></li>";
-					}
+				function active($currect_page){
+				  $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
+				  $url = end($url_array);  
+				  if($currect_page == $url){
+				      echo 'active'; //class name in css 
+				  } 
 				}
 				?>
+			    <li><a class="spanat <?php active('main.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Home</a></li>
+			    <li><a class="spanat <?php active('languages.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Languages</a></li>
+			    <li><a class="spanat <?php active('quiz.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Prices</a></li>
+			    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Contact Us</a></li>
 				<button class="btn" onClick="document.location.href='login.php'">LOG IN</button>
 			</div>
 		</div>
