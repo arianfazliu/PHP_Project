@@ -19,7 +19,7 @@
 				<div class="inputi">
 					<object type="image/svg+xml" data="../img/maili.svg">
 					</object>
-					<input  placeholder="E-mail" value="<?php echo $email; ?>" type="email" name="email" id="email">
+					<input  placeholder="E-mail" value="<?php echo $email; ?>" type="text" name="email" id="email">
 				</div>
 				<div class="inputi">
 					<object type="image/svg+xml" data="../img/phone.svg">

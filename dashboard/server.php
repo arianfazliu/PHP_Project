@@ -22,15 +22,25 @@ if (isset($_POST['reg_user'])) {
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
-  if (empty($email)) { array_push($errors, "Email is required"); }
+  if (empty($email)) { 
+    array_push($errors, "Email is required"); 
+  }else{
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+       array_push($errors,  "Invalid email format");
+    }
+  }
   if (empty($phone)) { array_push($errors, "Phone number is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
-  if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/", $password_1)) {
-    array_push($errors, "the password does not meet the requirements!");
+  if (empty($password_1)) { 
+    array_push($errors, "Password is required"); 
+  }else{
+    if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/", $password_1)) {
+      array_push($errors, "the password does not meet the requirements!");
+    }else if ($password_1 != $password_2) {
+      array_push($errors, "The two passwords do not match");
+    }
   }
-  if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
-  }
+
+
  
 
   // first check the database to make sure 
