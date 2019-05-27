@@ -1,26 +1,22 @@
 <?php
 session_start();
-
-// initializing variables
 $username = "";
 $email    = "";
 $errors = array(); 
 
-// connect to the database
-$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
+//hiqe prej komenti cila tvyn
+//Te arita:
+//$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
+//Te aurora: 
+$db = mysqli_connect("localhost","root","pwdpwd","login") or die("could not connect to database");
 
 
-// REGISTER USER
 if (isset($_POST['reg_user'])) {
-  // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['user']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $phone = mysqli_real_escape_string($db, $_POST['phonenum']);
   $password_1 = mysqli_real_escape_string($db, $_POST['pass']);
   $password_2 = mysqli_real_escape_string($db, $_POST['pass1']);
-
-  // form validation: ensure that the form is correctly filled ...
-  // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
   if (empty($email)) { 
     array_push($errors, "Email is required"); 
@@ -41,14 +37,11 @@ if (isset($_POST['reg_user'])) {
   }
 
 
- 
 
-  // first check the database to make sure 
-  // a user does not already exist with the same username and/or email
   $result = mysqli_query($db, "select * from users where username = '$username' or email = '$email'")
                   or die("Failed to query database " .mysqli_error($db));
   $user = mysqli_fetch_array($result);
-  if ($user) { // if user exists
+  if ($user) { 
     if ($user['username'] === $username) {
       array_push($errors, "Username already exists");
     }
@@ -58,7 +51,6 @@ if (isset($_POST['reg_user'])) {
     }
   }
 
-  // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
