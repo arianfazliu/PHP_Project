@@ -4,27 +4,22 @@
 		var $text;
 		var $percentage;
 		var $color;
+
+		public function __construct($title,$text,$percentage,$color){
+			$this->title=$title;
+			$this->text=$text;
+			$this->percentage=$percentage;
+			$this->color=$color;
+		}
 	}
-	$card1 = new Card;
-	$card1->title = 'English';
-	$card1->text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae officia, ad eos, hic dignissimos cupiditate perferendis, assumenda repudiandae optio repellendus quae accusamus aliquid porro amet temporibus recusandae perspiciatis error maiores.';
-	$card1->percentage = '83%';
-	$card1->color='#618fee';
-	$card2 = new Card;
-	$card2->title = 'French';
-	$card2->text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae officia, ad eos, hic dignissimos cupiditate perferendis, assumenda repudiandae optio repellendus quae accusamus aliquid porro amet temporibus recusandae perspiciatis error maiores.';
-	$card2->percentage = '30%';
-	$card2->color='#ee8c62';
-	$card3 = new Card;
-	$card3->title = 'Korean';
-	$card3->text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae officia, ad eos, hic dignissimos cupiditate perferendis, assumenda repudiandae optio repellendus quae accusamus aliquid porro amet temporibus recusandae perspiciatis error maiores.';
-	$card3->percentage = '15%';
-	$card3->color='#91e78e';
-	$card4 = new Card;
-	$card4->title = 'Spanish';
-	$card4->text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae officia, ad eos, hic dignissimos cupiditate perferendis, assumenda repudiandae optio repellendus quae accusamus aliquid porro amet temporibus recusandae perspiciatis error maiores.';
-	$card4->percentage = '5%';
-	$card4->color='#618fee';
+	$titles = array('English','French','Korean','Italian');
+	$texts = array('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi soluta reprehenderit facilis tenetur quisquam, natus suscipit vel, eius ipsum quibusdam cumque iusto culpa, praesentium quod fugiat! Tempore aliquid velit, odio!','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus, beatae inventore, quam, tempora quidem hic qui similique, molestiae nam a incidunt eum eos eligendi possimus maxime sit minus. Nobis.','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus commodi, possimus aspernatur, distinctio numquam molestias dolores eum, reprehenderit dignissimos doloremque est, optio? Nam non distinctio eveniet, quidem voluptatem quibusdam alias?','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor id, porro temporibus recusandae, illo laboriosam repudiandae velit nobis voluptas sapiente dicta a, cumque placeat corporis autem, asperiores accusamus sint commodi!');
+	$percentages = array('83%','30%','75%','12');
+	$colors=array('#618fee','#ee8c62','#91e78e','#618fee');
+	$cards = array();
+	for ($i=0;$i<4;$i++){
+	    $cards[] = new Card($titles[$i],$texts[$i],$percentages[$i],$colors[$i]); 
+	}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,74 +29,24 @@
 </head>
 <body>
 	<div class="display_grid">
-		<div>
-			<div class="cards">
-				<?php echo "<h3 class=\"cards-h3\">
-					$card1->title
-				</h3>
-				<p class=\"loremi\">$card1->text</p>
-				" ?>
-			</div>
-			<div class="loading">
-				<div style="position:relative;width:100%;margin:0 10px 0 0 ; height: 3px;background-color:#f1f1f1;">
-					<div style="position: absolute;left:0;top:0;margin:0;width: <?php echo $card1->percentage ?>;height:3px;z-index:1;background-color: <?php echo $card1->color ?>;"></div>
+		<?php 
+		foreach($cards as $card){
+			echo"<div>
+				<div class=\"cards\">
+					<h3 class=\"cards-h3\">
+						$card->title
+					</h3>
+					<p class=\"loremi\">$card->text</p>
 				</div>
-				<?php 
-					echo"$card1->percentage";
-				?>
-			</div>
-		</div>
-		<div>
-			<div class="cards">
-				<?php echo "<h3 class=\"cards-h3\">
-					$card2->title
-				</h3>
-				<p class=\"loremi\">$card2->text</p>
-				" ?>
-			</div>
-			<div class="loading">
-				<div style="position:relative;width:100%;margin:0 10px 0 0 ; height: 3px;background-color:#f1f1f1;">
-					<div style="position: absolute;left:0;top:0;margin:0;width: <?php echo $card2->percentage ?>;height:3px;z-index:1;background-color: <?php echo $card2->color ?>"></div>
+				<div class=\"loading\">
+					<div style='position:relative;width:100%;margin:0 10px 0 0 ; height: 3px;background-color:#f1f1f1;'>
+						<div style='position: absolute;left:0;top:0;margin:0;width:$card->percentage;height:3px;z-index:1;background-color:$card->color'></div>
+					</div>
+					$card->percentage
 				</div>
-				<?php 
-					echo"$card2->percentage";
-				?>
-			</div>
-		</div>
-		<div>
-			<div class="cards">
-				<?php echo "<h3 class=\"cards-h3\">
-					$card3->title
-				</h3>
-				<p class=\"loremi\">$card3->text</p>
-				" ?>
-			</div>
-			<div class="loading">
-				<div style="position:relative;width:100%;margin:0 10px 0 0 ; height: 3px;background-color:#f1f1f1;">
-					<div style="position: absolute;left:0;top:0;margin:0;width: <?php echo $card3->percentage ?>;height:3px;z-index:1;background-color: <?php echo $card3->color ?>"></div>
-				</div>
-				<?php 
-					echo"$card3->percentage";
-				?>
-			</div>
-		</div>
-		<div>
-			<div class="cards">
-				<?php echo "<h3 class=\"cards-h3\">
-					$card4->title
-				</h3>
-				<p class=\"loremi\">$card4->text</p>
-				" ?>
-			</div>
-			<div class="loading">
-				<div style="position:relative;width:100%;margin:0 10px 0 0 ; height: 3px;background-color:#f1f1f1;">
-					<div style="position: absolute;left:0;top:0;margin:0;width: <?php echo $card4->percentage ?>;height:3px;z-index:1;background-color: <?php echo $card4->color ?>"></div>
-				</div>
-				<?php 
-					echo"$card4->percentage";
-				?>
-			</div>
-		</div>
+			</div>";
+		}
+		?>
 	</div>
 </body>
 </html>
