@@ -15,9 +15,12 @@
 	  <form method="post" action="login.php">
 	  	<?php include('errors.php'); ?>
 	  	<div class="inputi">
+	  		
 	  		<object type="image/svg+xml" data="../img/user.svg">
 			</object>
+
 	  		<input  value="<?php echo $username; ?>" placeholder="Username" type="text" name="username" >
+
 	  	</div>
 	  	<div class="inputi">
 	  		<object type="image/svg+xml" data="../img/lock.svg">

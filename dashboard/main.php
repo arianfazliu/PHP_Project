@@ -17,6 +17,15 @@
 				  } 
 				}
 				?>
+				<!-- 
+				pathi te ariani
+				 <li><a class="spanat <?php active('main.php');?>" href="http://localhost/PHP_Project/dashboard/main.php">Home</a></li>
+			    <li><a class="spanat <?php active('languages.php');?>" href="http://localhost/PHP_Project/dashboard/main.php">Languages</a></li>
+			    <li><a class="spanat <?php active('quiz.php');?>" href="http://localhost/PHP_Project/dashboard/main.php">Prices</a></li>
+			    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost/PHP_Project/dashboard/main.php">Contact Us</a></li>
+				<button class="btn" onClick="document.location.href='login.php'">LOG IN</button>
+
+				-->
 			    <li><a class="spanat <?php active('main.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Home</a></li>
 			    <li><a class="spanat <?php active('languages.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Languages</a></li>
 			    <li><a class="spanat <?php active('quiz.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/main.php">Prices</a></li>
