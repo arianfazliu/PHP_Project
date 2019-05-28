@@ -9,6 +9,11 @@
     <div class="quiz">
         <?php include('../components/header.php') ?>
         <div><h1>Langs</h1>
+
+
+
+
+
         </div>
         <?php include('../components/footer.php') ?>
     </div>

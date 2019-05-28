@@ -12,7 +12,15 @@
 <body>
     <div class="quiz">
         <?php include('../components/header.php') ?>
-        <div><h1>English Quiz!</h1>
+        <div >
+
+            <img src="../img/dice/<?php echo rand(1,6); ?>.png" alt="">
+        
+            
+            <p>
+            <input class="button" type="button" value="Roll the dice" onclick="window.location.reload();"/>
+            </p>
+
         </div>
         <?php include('../components/footer.php') ?>
     </div>
@@ -32,5 +40,28 @@ body,html{
 	flex-direction: column;
 	justify-content: space-between;
 	text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #64cdb7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #499081;}
+
+.button:active {
+  background-color: #64cdb7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 </style>

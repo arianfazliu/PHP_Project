@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
 <?php
  	 $mailto = $_POST['mail_to'];
     $mailSub = $_POST['mail_sub'];
@@ -10,7 +18,7 @@
    $mail ->SMTPAuth = true;
    $mail ->SMTPSecure = 'ssl';
    $mail ->Host = "smtp.gmail.com";
-   $mail ->Port = 465; // or 587
+   $mail ->Port = 465; // bon edhe 587
    $mail ->IsHTML(true);
    $mail ->Username = "arianfazliu.aa@gmail.com";
    $mail ->Password = "lovenihon123";
@@ -25,7 +33,41 @@
    }
    else
    {
- echo "Mail Sent";
+
+   	
+ echo "";
+
+
    }
 
    ?>
+
+
+<div class="quiz">
+        <?php include('../components/header.php') ?>
+        <div><h3>Email sent successfully. Send another<a href="contactus.php"> Email.</h3>
+
+
+
+
+
+        </div>
+        <?php include('../components/footer.php') ?>
+    </div>
+</body>
+</html>
+
+<style>
+body,html{
+	height: 100%;
+	box-sizing: border-box;
+	margin:0;
+}
+.quiz{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+</style>
