@@ -23,7 +23,6 @@ if ($q !== "") {
 }
 
 
-<<<<<<< HEAD
 define('MYSQL_ASSOC',MYSQLI_ASSOC);
 $con = mysqli_connect("localhost","root","","login");
 if (!$con) {
@@ -39,9 +38,6 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     echo "<a href=\"\"><div class=\"sug\">" .$row['username']."</div></a>";
 }
 mysqli_close($con);
-=======
-echo $suggestion === "" ? "<h3 style=\"color: white;\">No languages found.</h3>" : $suggestion;
->>>>>>> e8e213821974bd7c3807344d8f8b014447d56922
 
 ?>
 
