@@ -15,8 +15,8 @@
 	</div>
 	<div class="displayContent">
         <div>
-    <form class="example" action="action_page.php">
-    <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value)">
+    <form class="example" action="javascript:void(0);" >
+    <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value)" onsubmit="showsuggestion(this.value)"> 
      
     </form>
     </div>
@@ -84,5 +84,6 @@ function showsuggestion(str) {
         xmlhttp.open("GET", "getsuggestion.php?q=" + str, true);
         xmlhttp.send();
     }
+   
 }
 </script>
