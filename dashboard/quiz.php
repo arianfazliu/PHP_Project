@@ -54,7 +54,7 @@ body,html{
   background-color: #64cdb7;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow:0 0 5px 0px #999
 }
 
 .button:hover {background-color: #499081;}

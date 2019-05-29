@@ -8,10 +8,10 @@ $errors = array();
 //Te arita:
 //$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
 //Te aurora: 
-//$db = mysqli_connect("localhost","root","pwdpwd","login") or die("could not connect to database");
+$db = mysqli_connect("localhost","root","pwdpwd","login") or die("could not connect to database");
 
 //te ariani: 
-$db = mysqli_connect("localhost","root","nihon123","login") or die("could not connect to database");
+//$db = mysqli_connect("localhost","root","nihon123","login") or die("could not connect to database");
 
 
 if (isset($_POST['reg_user'])) {
@@ -38,8 +38,6 @@ if (isset($_POST['reg_user'])) {
       array_push($errors, "The two passwords do not match");
     }
   }
-
-
 
   $result = mysqli_query($db, "select * from users where username = '$username' or email = '$email'")
                   or die("Failed to query database " .mysqli_error($db));
