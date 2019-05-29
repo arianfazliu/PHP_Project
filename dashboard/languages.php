@@ -1,9 +1,9 @@
 <?php 
 class Constructor{
-  public function __construct(){
+  public function construct(){
      echo "<html><header><title>Home</title></header><body>";
   }
-  public function __destruct(){
+  public function destruct(){
      echo "</body></html>";
   }
 }
@@ -26,7 +26,7 @@ class Constructor{
 <?php include('../components/footer.php') ?>
 
 <script>
-  
+
 </script>
 <style>
 html,body{
@@ -40,7 +40,7 @@ html,body{
 }
 .display_grid{
   display: grid;
-    grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   background-color: white;
   margin:20px 0;
   border-radius:5px;
