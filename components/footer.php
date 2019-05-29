@@ -34,7 +34,7 @@
 </html>
 <style>
 .footer{
-	background-color: #69e4a9;
+	background-color: #63cdb7;
 	color:white;
 	display: flex;
 	justify-content: space-between;

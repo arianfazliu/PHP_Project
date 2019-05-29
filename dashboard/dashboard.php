@@ -6,7 +6,6 @@ class Constructor{
 	public function __destruct(){
 		 echo "</body></html>";
 	}
-
 }
 ?>
 <?php $construct = new Constructor() ?>
