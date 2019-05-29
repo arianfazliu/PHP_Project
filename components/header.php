@@ -48,6 +48,7 @@
 		background-color: white;
 		position: sticky;
 		top:0;
+		z-index: 10;
 	}
 	h3{
 		color:#323232;
