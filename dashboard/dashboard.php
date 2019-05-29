@@ -1,67 +1,88 @@
-<?php 
-class Constructor{
-	public function __construct(){
-		 echo "<html><header><title>Home</title></header><body>";
-	}
-	public function __destruct(){
-		 echo "</body></html>";
-	}
-}
-?>
-<?php $construct = new Constructor() ?>
-<?php include('../components/header.php') ?>
-<div class="homepage">
-	<div style="display: flex;justify-content: space-between; align-items: center;">
-		<h3 style="margin:0;">My Courses</h3>
-		<button class="butoni">All Courses 
-			<object type="image/svg+xml" data="../img/chevron-down.svg"></object>
-		</button>
-	</div>
-	<div class="display_grid">
-		<div>
-			<?php  include('../components/card.php') ?>
-		</div>
-	</div>
-</div>
-<?php include('../components/footer.php') ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-	
-</script>
+<head>
+    <title>Languages</title>
+    
+</head>
+
+<body>
+
+<div class="homepage">
+   <?php include('../components/header.php') ?>
+	<div class="displayContent">
+      <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
+      <div style="z-index: 1;">
+        <form autocomplete="off" class="example" action="javascript:void(0)">
+          <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value);">
+        </form>
+      </div>
+      <div id="divsuggestion" style="z-index: 10;">
+      </div>
+	</div>
+   <?php include('../components/footer.php') ?>
+</div>
+</body>
+
+</html>
+<script></script>
 <style>
-html,body{
-	height: 100%;
+body,html{
+  height: 100%;
 	box-sizing: border-box;
 	background-color: #fafafa;
 }
 .homepage{
-	padding: 20px 100px;
-	min-height: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.display_grid{
-	display: grid;
-  	grid-template-columns: auto auto auto;
-	background-color: white;
-	margin:20px 0;
-	border-radius:5px;
+.displayContent{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  overflow-y:hidden;
+  height: 100%;
 }
-.display_grid div{
-		text-align:center;
-		margin:10px 15px 25px 15px;
+* {
+  box-sizing: border-box;
 }
-.butoni{
-	display: flex;
-	cursor:pointer;
-	align-items: center;
-	background-color: white;
-	font-size:15px;
-	border:none;
-	border-radius:5px;
-	padding:10px 15px;
-	outline:none;
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  width:500px ;
+  border-radius: 2px;
+  border:none;
+  outline: none;
+  background: #f1f1f1;
 }
-object{
-	margin-bottom:-3px;
-	margin-left:2px;
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>
+
+<script>
+function showsuggestion(str) {
+    if (str.length == 0) { 
+        document.getElementById("divsuggestion").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("divsuggestion").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "getsuggestion.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>

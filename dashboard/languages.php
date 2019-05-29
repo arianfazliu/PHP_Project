@@ -20,52 +20,48 @@
      
     </form>
     </div>
-
-    <div id="divsuggestion">
-        
+  </div>
 </div>
-	</div>
-</div>
- 
- <?php include('../components/footer.php') ?>
-</body>
+<?php include('../components/footer.php') ?>
 
-</html>
-<script></script>
+<script>
+  
+</script>
 <style>
-
-.homepage{
-padding: 20px 100px;
-min-height: 70%;
-}
-body,html{
-    height: 100%;
-	box-sizing: border-box;
-	background-color: #fafafa;
-}
-
-.displayContent div{
-		text-align:center;
-		margin:10px 15px 25px 15px;
-        height: 100%;    
-}
-* {
+html,body{
+  height: 100%;
   box-sizing: border-box;
+  background-color: #fafafa;
 }
-
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 3px solid lightgrey;
-  float: left;
-  width: 100%;
-  background: #f1f1f1;
+.homepage{
+  padding: 20px 100px;
+  min-height: 70%;
 }
-
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+.display_grid{
+  display: grid;
+    grid-template-columns: auto auto auto;
+  background-color: white;
+  margin:20px 0;
+  border-radius:5px;
+}
+.display_grid div{
+    text-align:center;
+    margin:10px 15px 25px 15px;
+}
+.butoni{
+  display: flex;
+  cursor:pointer;
+  align-items: center;
+  background-color: white;
+  font-size:15px;
+  border:none;
+  border-radius:5px;
+  padding:10px 15px;
+  outline:none;
+}
+object{
+  margin-bottom:-3px;
+  margin-left:2px;
 }
 </style>
 

@@ -81,6 +81,7 @@ input:last-child{
     background-color: #63cdb7;
     border-radius:20px;
     padding: 10px 0;
+    cursor: pointer;
 }
 input::placeholder{
     color:#a6a6a6;

@@ -28,9 +28,8 @@
 		    <li><a class="spanat <?php active('dashboard.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/dashboard.php">Home</a></li>
 		    <li><a class="spanat <?php active('languages.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/languages.php">Languages</a></li>
 		    <li><a class="spanat <?php active('quiz.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/quiz.php">Quiz</a></li>
-		    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/contactus.php">Contact Us</a></li> -->
-
-			<button onclick="window.location='main.php'" class="btn">LOG OUT</button>
+		    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/contactus.php">Contact Us</a></li> 
+			<button onclick="window.location='main.php'" class="btn">LOG OUT</button>-->
 		</div>
 	</div>
 </body>
@@ -49,6 +48,7 @@
 		background-color: white;
 		position: sticky;
 		top:0;
+		z-index: 10;
 	}
 	h3{
 		color:#323232;
