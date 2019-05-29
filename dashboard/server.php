@@ -6,7 +6,7 @@ $errors = array();
 
 //hiqe prej komenti cila tvyn
 //Te arita:
-//$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
+$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
 //Te aurora: 
 $db = mysqli_connect("localhost","root","pwdpwd","login") or die("could not connect to database");
 
