@@ -35,22 +35,22 @@ $mysql = mysqli_connect('localhost', 'username', 'password');
 mysqli_select_db($mysql, 'mydb');
 $result = mysqli_query($mysql, 'SELECT full_name, email, photo FROM mailinglist WHERE sent = false');
 
-foreach ($result as $row) { //This iterator syntax only works in PHP 5.4+
-    $mail->addAddress($row['email'], $row['full_name']);
-    if (!empty($row['photo'])) {
-        $mail->addStringAttachment($row['photo'], 'YourPhoto.jpg'); //Assumes the image data is stored in the DB
+foreach ($result as $rows) { //This iterator syntax only works in PHP 5.4+
+    $mail->addAddress($rows['email'], $rows['full_name']);
+    if (!empty($rows['photo'])) {
+        $mail->addStringAttachment($rows['photo'], 'YourPhoto.jpg'); //Assumes the image data is stored in the DB
     }
 
     if (!$mail->send()) {
-        echo "Mailer Error (" . str_replace("@", "&#64;", $row["email"]) . ') ' . $mail->ErrorInfo . '<br />';
+        echo "Mailer Error (" . str_replace("@", "&#64;", $rows["email"]) . ') ' . $mail->ErrorInfo . '<br />';
         break; //Abandon sending
     } else {
-        echo "Message sent to :" . $row['full_name'] . ' (' . str_replace("@", "&#64;", $row['email']) . ')<br />';
+        echo "Message sent to :" . $rows['full_name'] . ' (' . str_replace("@", "&#64;", $rows['email']) . ')<br />';
         //Mark it as sent in the DB
         mysqli_query(
             $mysql,
             "UPDATE mailinglist SET sent = true WHERE email = '" .
-            mysqli_real_escape_string($mysql, $row['email']) . "'"
+            mysqli_real_escape_string($mysql, $rows['email']) . "'"
         );
     }
     // Clear all addresses and attachments for next loop
