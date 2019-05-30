@@ -7,7 +7,8 @@ $q = $_REQUEST["q"];
 
 $suggestion = "";
 
-if ($q !== "" && $q[0]!=='/') {
+
+if (substr($q,0,1) !== "/") {
     $q = strtolower($q);
     $len=strlen($q);
     foreach($languages as $lang => $lang_value) {
@@ -22,23 +23,34 @@ if ($q !== "" && $q[0]!=='/') {
     echo $suggestion === "" ? "<h3 style=\"color: grey;\">No languages found.</h3>" : $suggestion;
 }
 
-
+else if(substr($q,0,1) == "/"){
 define('MYSQL_ASSOC',MYSQLI_ASSOC);
 $con = mysqli_connect("localhost","root","","login");
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
+
 $len2=strlen($q);
-$query=substr($q,1,$len2-1);
+$query=trim($q,"/");
 mysqli_select_db($con,"login");
 $sql="SELECT * FROM users WHERE username = '$query'";
 $result = mysqli_query($con,$sql);
 
-while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-    echo "<a><div class=\"sug\">".$row['username']."</div></a>";
-}
-mysqli_close($con);
 
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+    $arrayU=array("Username: ".$row['username'],"Name: ".$row['Uname'],"Surname: ".$row['Usurname']);
+    $arrayImploded= implode("<br>",$arrayU);
+        $suggestion ="<a href=\"\"><div class=\"sug\">".$arrayImploded."</div></a>";  
+}
+
+
+
+
+
+echo $suggestion === "" ? "<h3 style=\"color: grey;\">No users found.</h3>" : $suggestion;
+
+mysqli_close($con);
+}
 ?>
 
 <style>

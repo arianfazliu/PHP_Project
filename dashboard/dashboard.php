@@ -2,10 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <title>Quiz</title>
+=======
+    <title>Dashboard</title>
+    
+>>>>>>> 61160f28ec40580f2c0fbb8d0e48b4eec107038a
 </head>
 <body>
+<<<<<<< HEAD
   <div class="homepage">
     <div class="displayContent">
         <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
@@ -19,6 +25,23 @@
         </div>
     </div>
   </div>
+=======
+
+<div class="homepage">
+   <?php include('../components/header.php') ?>
+	<div class="displayContent">
+      <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
+      <div style="z-index: 1;">
+        <form autocomplete="off" class="example" action="javascript:void(0)">
+          <input type="text" placeholder="Search" name="search" onkeyup="showsuggestion(this.value);">
+        </form>
+      </div>
+      <div id="divsuggestion" style="z-index: 10;">
+      </div>
+	</div>
+   <?php include('../components/footer.php') ?>
+</div>
+>>>>>>> 61160f28ec40580f2c0fbb8d0e48b4eec107038a
 </body>
 <style type="text/css">
 body,html{
@@ -79,6 +102,11 @@ function showsuggestion(str) {
         xmlhttp.send();
     }
 }
+<<<<<<< HEAD
 </script>
 </html>
 <?php require('../components/footer.php') ?>
+=======
+
+</script>
+>>>>>>> 61160f28ec40580f2c0fbb8d0e48b4eec107038a

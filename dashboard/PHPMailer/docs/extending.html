@@ -1,19 +1,20 @@
 <html>
+
 <head>
-<title>Examples using phpmailer</title>
+    <title>Examples using phpmailer</title>
 </head>
 
 <body>
 
-<h2>Examples using PHPMailer</h2>
+    <h2>Examples using PHPMailer</h2>
 
-<h3>1. Advanced Example</h3>
-<p>
+    <h3>1. Advanced Example</h3>
+    <p>
 
-This demonstrates sending multiple email messages with binary attachments
-from a MySQL database using multipart/alternative messages.<p>
+        This demonstrates sending multiple email messages with binary attachments from a MySQL database using multipart/alternative messages.
+        <p>
 
-<pre>
+            <pre>
 require 'PHPMailerAutoload.php';
 
 $mail = new PHPMailer();
@@ -27,50 +28,45 @@ $mail->Mailer = 'smtp';
 $query = "SELECT full_name, email, photo FROM employee";
 $result = @mysqli_query($query);
 
-while ($row = mysqli_fetch_assoc($result))
+while ($rows = mysqli_fetch_assoc($result))
 {
     // HTML body
-    $body  = "Hello &lt;font size=\"4\"&gt;" . $row['full_name'] . "&lt;/font&gt;, &lt;p&gt;";
+    $body  = "Hello &lt;font size=\"4\"&gt;" . $rows['full_name'] . "&lt;/font&gt;, &lt;p&gt;";
     $body .= "&lt;i&gt;Your&lt;/i&gt; personal photograph to this message.&lt;p&gt;";
     $body .= "Sincerely, &lt;br&gt;";
     $body .= "phpmailer List manager";
 
     // Plain text body (for mail clients that cannot read HTML)
-    $text_body  = 'Hello ' . $row['full_name'] . ", \n\n";
+    $text_body  = 'Hello ' . $rows['full_name'] . ", \n\n";
     $text_body .= "Your personal photograph to this message.\n\n";
     $text_body .= "Sincerely, \n";
     $text_body .= 'phpmailer List manager';
 
     $mail->Body    = $body;
     $mail->AltBody = $text_body;
-    $mail->addAddress($row['email'], $row['full_name']);
-    $mail->addStringAttachment($row['photo'], 'YourPhoto.jpg');
+    $mail->addAddress($rows['email'], $rows['full_name']);
+    $mail->addStringAttachment($rows['photo'], 'YourPhoto.jpg');
 
     if(!$mail->send())
-        echo "There has been a mail error sending to " . $row['email'] . "&lt;br&gt;";
+        echo "There has been a mail error sending to " . $rows['email'] . "&lt;br&gt;";
 
     // Clear all addresses and attachments for next loop
     $mail->clearAddresses();
     $mail->clearAttachments();
 }
 </pre>
-<p>
+            <p>
 
-<h3>2. Extending PHPMailer</h3>
-<p>
+                <h3>2. Extending PHPMailer</h3>
+                <p>
 
-Extending classes with inheritance is one of the most
-powerful features of object-oriented programming. It allows you to make changes to the
-original class for your own personal use without hacking the original
-classes, and it's very easy to do:
+                    Extending classes with inheritance is one of the most powerful features of object-oriented programming. It allows you to make changes to the original class for your own personal use without hacking the original classes, and it's very easy to do:
 
-<p>
-Here's a class that extends the phpmailer class and sets the defaults
-for the particular site:<br>
-PHP include file: my_phpmailer.php
-<p>
+                    <p>
+                        Here's a class that extends the phpmailer class and sets the defaults for the particular site:<br> PHP include file: my_phpmailer.php
+                        <p>
 
-<pre>
+                            <pre>
 require 'PHPMailerAutoload.php';
 
 class my_phpmailer extends PHPMailer {
@@ -101,10 +97,9 @@ class my_phpmailer extends PHPMailer {
     }
 }
 </pre>
-<br>
-Now here's a normal PHP page in the site, which will have all the defaults set above:<br>
+                            <br> Now here's a normal PHP page in the site, which will have all the defaults set above:<br>
 
-<pre>
+                            <pre>
 require 'my_phpmailer.php';
 
 // Instantiate your new class
@@ -125,4 +120,5 @@ if(!$mail->send())
 echo 'Message was sent successfully';
 </pre>
 </body>
+
 </html>
