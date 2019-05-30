@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include('../components/header.php');
     class Cards{
         var $title;
         var $text;

@@ -42,11 +42,6 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     $arrayImploded= implode("<br>",$arrayU);
         $suggestion ="<a href=\"\"><div class=\"sug\">".$arrayImploded."</div></a>";  
 }
-
-
-
-
-
 echo $suggestion === "" ? "<h3 style=\"color: grey;\">No users found.</h3>" : $suggestion;
 
 mysqli_close($con);
