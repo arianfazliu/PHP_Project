@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Languages</title>
+    <title>Dashboard</title>
     
 </head>
 
@@ -14,7 +14,7 @@
       <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
       <div style="z-index: 1;">
         <form autocomplete="off" class="example" action="javascript:void(0)">
-          <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value);">
+          <input type="text" placeholder="Search" name="search" onkeyup="showsuggestion(this.value);">
         </form>
       </div>
       <div id="divsuggestion" style="z-index: 10;">
@@ -85,4 +85,5 @@ function showsuggestion(str) {
         xmlhttp.send();
     }
 }
+
 </script>
