@@ -1,27 +1,28 @@
+<?php include('../components/header.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Quiz</title>
-    <script type="text/javascript" src="../js/thequiz.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
 </head>
-
 <body>
+<<<<<<< HEAD
     <div class="quiz">
         <?php include('../components/header.php') ?>
         <div>
 
+=======
+    <div  class="quiz">
+        <div id="mydiv">
+>>>>>>> 2c850106b25b78fec21b8745ef3c39eaab824741
             <img src="../img/dice/<?php echo rand(1,6); ?>.png" alt="">
-        
-            
             <p>
             <input class="button" type="button" value="Roll the dice" onclick="window.location.reload();"/>
             </p>
-
         </div>
+<<<<<<< HEAD
         <div class="readclass">
            <?php
          $filename = "tmp.txt";
@@ -67,23 +68,27 @@
 
         </div>
         <?php include('../components/footer.php') ?>
+=======
+>>>>>>> 2c850106b25b78fec21b8745ef3c39eaab824741
     </div>
 </body>
-
-</html>
-<script></script>
+<script>
+$.get('/api/mydiv', function(data) {
+  $('#mydiv').html(data);
+});
+</script>
 <style>
 body,html{
-	height: 100%;
-	box-sizing: border-box;
-	margin:0;
+  height:calc(100% - 100px);
+  box-sizing: border-box;
+  margin:0;
 }
 .quiz{
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .button {
@@ -108,6 +113,7 @@ body,html{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+<<<<<<< HEAD
 
 .readclass {
 border: 2px solid gray;
@@ -143,3 +149,8 @@ text-align: center;
   color: white;
 }
 </style>
+=======
+</style>
+</html>
+<?php include('../components/footer.php') ?>
+>>>>>>> 2c850106b25b78fec21b8745ef3c39eaab824741

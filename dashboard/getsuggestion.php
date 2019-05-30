@@ -7,6 +7,7 @@ $q = $_REQUEST["q"];
 
 $suggestion = "";
 
+
 if (substr($q,0,1) !== "/") {
     $q = strtolower($q);
     $len=strlen($q);
@@ -30,20 +31,17 @@ if (!$con) {
 }
 
 $len2=strlen($q);
-$query=substr($q,1,$len2-1);
+$query=trim($q,"/");
 mysqli_select_db($con,"login");
 $sql="SELECT * FROM users WHERE username = '$query'";
 $result = mysqli_query($con,$sql);
 
 
 while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-        $suggestion ="<a href=\"\"><div class=\"sug\">" .$row['Uname']."\t".$row['Usurname']."\t".$row['username']."</div></a>";  
+    $arrayU=array("Username: ".$row['username'],"Name: ".$row['Uname'],"Surname: ".$row['Usurname']);
+    $arrayImploded= implode("<br>",$arrayU);
+        $suggestion ="<a href=\"\"><div class=\"sug\">".$arrayImploded."</div></a>";  
 }
-
-
-
-
-
 echo $suggestion === "" ? "<h3 style=\"color: grey;\">No users found.</h3>" : $suggestion;
 
 mysqli_close($con);

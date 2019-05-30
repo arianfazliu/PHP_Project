@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
 	<title>Footer</title>
+	<style>
+	.footer{
+		background-color: #63cdb7;
+		color:white;
+		display: flex;
+		justify-content: space-between;
+		padding:5px 100px;
+		margin-bottom:0;
+	}
+	.h3-tefooteri{
+		color:white;
+		margin-bottom:0;
+	}
+	p{
+		font-size: 13px;
+	}
+	object{
+		margin-bottom:-2px;
+		margin-right:5px;
+	}
+</style>
 </head>
-<body>
-	<div class="footer">
+<body> 
+	<div id="footer" class="footer">
 		<div>
 			<h3 class="h3-tefooteri">GETFLUENT</h3>
 			<p style="font-size: 13px;margin:5px 0 20px 0;">Copyright © </p>
@@ -31,25 +51,7 @@
 		</div>
 	</div>
 </body>
+<script>
+ 
+</script>
 </html>
-<style>
-.footer{
-	background-color: #63cdb7;
-	color:white;
-	display: flex;
-	justify-content: space-between;
-	padding:5px 100px;
-	margin-bottom:0;
-}
-.h3-tefooteri{
-	color:white;
-	margin-bottom:0;
-}
-p{
-	font-size: 13px;
-}
-object{
-	margin-bottom:-2px;
-	margin-right:5px;
-}
-</style>
