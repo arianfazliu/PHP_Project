@@ -8,7 +8,7 @@
 <body>
 	<div class="signup">
 		<div id="frm">
-			<p class="header">Sign Up</p >
+			<p class="header" style="font-family:Pretty;padding-top: 50px;">Sign Up</p >
 			<form action="signup.php" method="POST">
 				<?php include('errors.php') ?>
 				<div class="inputi">
@@ -58,6 +58,10 @@ body,html{
 .header{
 	color:#496070;
 	font-size:35px;
+}
+@font-face{
+	font-family: "Pretty";
+    src: url("magic.woff") format("woff");     
 }
 .signup{
 	position: relative;

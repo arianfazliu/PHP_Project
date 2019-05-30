@@ -116,13 +116,17 @@
         margin:5px 0;
         font-size:16px;
     }
+    @font-face{
+	font-family: "Pretty";
+    src: url("magic.woff") format("woff");     
+}
 </style>
 <body>
     <div class="quiz">
         <div class="contactus">
             <div style="display: flex;margin:0 30px;align-items:center;justify-content: space-between;">
                 <div class="side-note">
-                    <h3 class="cards-h3" style="color: #6b6b6b;">Feel like contacting us?</h3>
+                    <h3 class="cards-h3" style="color: #6b6b6b;font-family: Pretty;font-size: 30px">Feel  like  contacting  us?</h3>
                     <p>Get in touch and let us know how we can help</p>
                     <p>
                     Submit your queries here and we will get back to you as soon as possible
