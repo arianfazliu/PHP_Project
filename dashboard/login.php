@@ -3,40 +3,7 @@
 <html>
 <head>
   <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="signup">
-  	<div style="flex:1; display: flex;align-items: center; justify-content: center;">
-		<img src="../img/login.png" style="height: 500px;width:600px;" alt="">
-	</div> 
-  	<div id="frm">
-  	  <p class="header">Welcome Back! <br> <span>Log into your Account</span></p >
-	  <form method="post" action="login.php">
-	  	<?php include('errors.php'); ?>
-	  	<div class="inputi">
-	  		
-	  		<object type="image/svg+xml" data="../img/user.svg">
-			</object>
-
-	  		<input  value="<?php echo $username; ?>" placeholder="Username" type="text" name="username" >
-
-	  	</div>
-	  	<div class="inputi">
-	  		<object type="image/svg+xml" data="../img/lock.svg">
-			</object>
-	  		<input placeholder="Password" type="password" name="password">
-	  	</div>
-	  	<div class="inputi">
-	  		<input class="login" type="submit" name="login_user" value="Log in" id="btn">	  	
-	  	</div>
-	  </form>
-	  <p style="cursor:pointer;margin-top:100px;color: #a9b5bf;">Not yet a member? <span onclick="window.location='signup.php'" style="font-size: 16px;color:#73ccf5">Sign up!</span></p>
-  	</div>
-  </div>
-</body>
-</html>
-<style>
+<style type="text/css">
 	body,html{
 	margin:0;
 	box-sizing: border-box;
@@ -108,4 +75,39 @@ form{
 	border-left: none;
 	border-radius:0;
 }
+.login:focus{
+	color:white;
+}
 </style>
+</head>
+<body>
+  <div class="signup">
+  	<div style="flex:1; display: flex;align-items: center; justify-content: center;">
+		<img src="../img/login.png" style="height: 500px;width:600px;" alt="">
+	</div> 
+  	<div id="frm">
+  	  <p class="header">Welcome Back! <br> <span>Log into your Account</span></p >
+	  <form method="post" action="login.php">
+	  	<?php include('errors.php'); ?>
+	  	<div class="inputi">
+	  		
+	  		<object type="image/svg+xml" data="../img/user.svg">
+			</object>
+
+	  		<input  value="<?php echo $username; ?>" placeholder="Username" type="text" name="username" >
+
+	  	</div>
+	  	<div class="inputi">
+	  		<object type="image/svg+xml" data="../img/lock.svg">
+			</object>
+	  		<input placeholder="Password" type="password" name="password">
+	  	</div>
+	  	<div class="inputi">
+	  		<input class="login" type="submit" name="login_user" value="Log in" id="btn">	  	
+	  	</div>
+	  </form>
+	  <p style="cursor:pointer;margin-top:100px;color: #a9b5bf;">Not yet a member? <span onclick="window.location='signup.php'" style="font-size: 16px;color:#73ccf5">Sign up!</span></p>
+  	</div>
+  </div>
+</body>
+</html>

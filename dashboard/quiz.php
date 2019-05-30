@@ -1,45 +1,39 @@
+<?php include('../components/header.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Quiz</title>
-    <script type="text/javascript" src="../js/thequiz.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
 </head>
-
 <body>
-    <div class="quiz">
-        <?php include('../components/header.php') ?>
-        <div >
-
+    <div  class="quiz">
+        <div id="mydiv">
             <img src="../img/dice/<?php echo rand(1,6); ?>.png" alt="">
-        
-            
             <p>
             <input class="button" type="button" value="Roll the dice" onclick="window.location.reload();"/>
             </p>
-
         </div>
-        <?php include('../components/footer.php') ?>
     </div>
 </body>
-
-</html>
-<script></script>
+<script>
+$.get('/api/mydiv', function(data) {
+  $('#mydiv').html(data);
+});
+</script>
 <style>
 body,html{
-	height: 100%;
-	box-sizing: border-box;
-	margin:0;
+  height:calc(100% - 100px);
+  box-sizing: border-box;
+  margin:0;
 }
 .quiz{
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .button {
@@ -65,3 +59,5 @@ body,html{
   transform: translateY(4px);
 }
 </style>
+</html>
+<?php include('../components/footer.php') ?>

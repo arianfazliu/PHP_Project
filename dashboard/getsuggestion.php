@@ -7,6 +7,7 @@ $q = $_REQUEST["q"];
 
 $suggestion = "";
 
+
 if (substr($q,0,1) !== "/") {
     $q = strtolower($q);
     $len=strlen($q);
