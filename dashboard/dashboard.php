@@ -8,10 +8,10 @@
   <div class="homepage">
     <div class="displayContent">
         <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
-        <h3 style="font-weight:300;margin-top:-120px;margin-bottom:50px;z-index: 10;color:white;">Search a user using '/user' or a language 'language'</h3>
+        
         <div style="z-index: 1;">
           <form autocomplete="off" class="example" action="javascript:void(0)">
-            <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value);">
+            <input type="text" placeholder="Search a user using '/user' or a language 'language'" name="search" onkeyup="showsuggestion(this.value);">
           </form>
         </div>
         <div id="divsuggestion" style="z-index: 10;">
