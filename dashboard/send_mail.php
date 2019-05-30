@@ -24,12 +24,12 @@
    $mail ->Password = "pwdpwd123";
    $mail ->SetFrom("clannad.lang@gmail.com");
    $mail ->Subject = $mailSub;
-   $mail ->Body = $mailMsg;
+   $mail ->Body =  $mailMsg;
    $mail ->AddAddress($mailto);
 
    if(!$mail->Send())
    {
-       echo "Mail Not Sent";
+       echo "Email Not Sent";
    }
    else
    {
