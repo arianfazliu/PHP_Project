@@ -113,5 +113,9 @@ form{
 	color:white ;
 	border-left: none;
 	border-radius:0;
+	cursor: pointer;
+}
+.login:focus{
+	color:white;
 }
 </style>

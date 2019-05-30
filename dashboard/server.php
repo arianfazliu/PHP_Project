@@ -8,10 +8,8 @@ $password_2 = "";
 $errors = array(); 
 
 //hiqe prej komenti cila tvyn
-//Te arita:
+//Te arita dhe aurora:
 $db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
-//Te aurora: 
-//$db = mysqli_connect("localhost","root","pwdpwd","login") or die("could not connect to database");
 
 //te ariani: 
 //$db = mysqli_connect("localhost","root","nihon123","login") or die("could not connect to database");
@@ -57,7 +55,7 @@ if (isset($_POST['reg_user'])) {
 
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
-  	$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";//qetu password-> upassword
+  	$query = "INSERT INTO users (username, email, upassword) VALUES('$username', '$email', '$password')";//qetu password-> upassword
     mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
@@ -79,7 +77,7 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
     $password = md5($password);
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";//qitu upassword nven password
+    $query = "SELECT * FROM users WHERE username='$username' AND upassword='$password'";//qitu upassword nven password
     $results = mysqli_query($db, $query);
     //if (!$results) {
       //array_push($errors, "Wrong username/password combination");

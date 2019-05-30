@@ -1,36 +1,30 @@
+<?php require('../components/header.php') ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Languages</title>
-    
+    <meta charset="UTF-8">
+    <title>Quiz</title>
 </head>
-
 <body>
-
-<div class="homepage">
-   <?php include('../components/header.php') ?>
-	<div class="displayContent">
-      <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
-      <div style="z-index: 1;">
-        <form autocomplete="off" class="example" action="javascript:void(0)">
-          <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value);">
-        </form>
-      </div>
-      <div id="divsuggestion" style="z-index: 10;">
-      </div>
-	</div>
-   <?php include('../components/footer.php') ?>
-</div>
+  <div class="homepage">
+    <div class="displayContent">
+        <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
+        <h3 style="font-weight:300;margin-top:-120px;margin-bottom:50px;z-index: 10;color:white;">Search a user using '/user' or a language 'language'</h3>
+        <div style="z-index: 1;">
+          <form autocomplete="off" class="example" action="javascript:void(0)">
+            <input type="text" placeholder="Search.." name="search" onkeyup="showsuggestion(this.value);">
+          </form>
+        </div>
+        <div id="divsuggestion" style="z-index: 10;">
+        </div>
+    </div>
+  </div>
 </body>
-
-</html>
-<script></script>
-<style>
+<style type="text/css">
 body,html{
-  height: 100%;
-	box-sizing: border-box;
-	background-color: #fafafa;
+  height:calc(100% - 100px);
+  box-sizing: border-box;
+  background-color: #fafafa;
 }
 .homepage{
   height: 100%;
@@ -86,3 +80,5 @@ function showsuggestion(str) {
     }
 }
 </script>
+</html>
+<?php require('../components/footer.php') ?>

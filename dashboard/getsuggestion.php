@@ -7,7 +7,7 @@ $q = $_REQUEST["q"];
 
 $suggestion = "";
 
-if ($q !== "") {
+if ($q !== "" && $q[0]!=='/') {
     $q = strtolower($q);
     $len=strlen($q);
     foreach($languages as $lang => $lang_value) {
@@ -35,7 +35,7 @@ $sql="SELECT * FROM users WHERE username = '$query'";
 $result = mysqli_query($con,$sql);
 
 while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-    echo "<a href=\"\"><div class=\"sug\">" .$row['username']."</div></a>";
+    echo "<a><div class=\"sug\">".$row['username']."</div></a>";
 }
 mysqli_close($con);
 

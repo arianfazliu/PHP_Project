@@ -49,8 +49,7 @@
 		?>
 	</div>
 </body>
-</html>
-<style>
+<style type="text/css">
 .cards, .loading{
 	border-radius:5px;
 	border:solid 1px #f1f1f1;
@@ -72,3 +71,4 @@
 	align-items: center;
 }
 </style>
+</html>
