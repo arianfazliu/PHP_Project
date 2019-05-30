@@ -1,18 +1,18 @@
 <?php 
-    class Card{
+    class Cards{
         var $title;
         var $text;
         var $contact;
     }
-    $card1 = new Card;
+    $card1 = new Cards;
     $card1->title="Languages";
     $card1->text="We'd love to talk about how we can work together";
     $card1->contact="languages ->";
-    $card2 = new Card;
+    $card2 = new Cards;
     $card2->title="Help & Support";
     $card2->text="We're here to help with any questions or code.";
     $card2->contact="Contact support ->";
-    $card3 = new Card;
+    $card3 = new Cards;
     $card3->title="Social media";
     $card3->text="Follow us on Twitter so you can be updated with our each new feature!";
     $card3->contact="Visit our page->";
