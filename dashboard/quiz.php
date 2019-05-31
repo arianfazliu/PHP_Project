@@ -54,7 +54,6 @@
               fwrite($myfile, $txt);
               fclose($myfile);
               ?>
-
               <p>
                 <p class="p">Para se tklikohet "Write function" tek quiz.php  mund tshtohet teksti
           pastaj pas klikimit te butonit teksti i shtuar do te ruhet ne newfile.txt</p>

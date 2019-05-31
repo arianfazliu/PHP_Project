@@ -4,8 +4,8 @@ $languages = array("English"=>"https://www.facebook.com/", "French"=>"https://ww
 $q = $_REQUEST["q"];
 $suggestion = "";
 
-
-if (substr($q,0,1) !== "/") {
+$q2=str_replace($q,substr($q,0,1),$q);
+if ($q2 !== "/") {
     $q = strtolower($q);
     $len=strlen($q);
     foreach($languages as $lang => $lang_value) {
