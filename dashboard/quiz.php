@@ -1,3 +1,4 @@
+<?php include('../components/header.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,83 +12,77 @@
 
 <body>
     <div class="quiz">
-        <?php include('../components/header.php') ?>
-        <div>
-
+        <div class="readclass">
+          <h2 style="color:#545454;font-weight: 400;margin-bottom:15px;">Read File</h2>
+           <?php
+               $filename = "tmp.txt";
+               $file = fopen( $filename, "r" );
+               if( $file == false ) {
+                  echo ( "Error in opening file" );
+                  exit();
+               }
+               $filesize = filesize( $filename );
+               $filetext = fread( $file, $filesize );
+              $filewithext = basename($filename);         // outputi "tmp.txt"
+              $filewithoutext = basename($filename, ".txt"); // outputi "tmp"
+               fclose( $file );
+               echo ("<p class=\"p\">File name with ext.: $filewithext</p>");
+               echo ("<p class=\"p\">File name without ext.: $filewithoutext</p>");
+               echo ( "<p class=\"p\">File size : $filesize bytes</p>");
+               echo ( "<p class=\"p\">$filetext</p>" );
+            ?>
+        </div>
+        <div style="flex:1;">
             <img src="../img/dice/<?php echo rand(1,6); ?>.png" alt="">
-        
-            
             <p>
             <input class="button" type="button" value="Roll the dice" onclick="window.location.reload();"/>
             </p>
-
         </div>
-        <div class="readclass">
-           <?php
-         $filename = "tmp.txt";
-         $file = fopen( $filename, "r" );
-         
-         if( $file == false ) {
-            echo ( "Error in opening file" );
-            exit();
-         }
-         
-         $filesize = filesize( $filename );
-         $filetext = fread( $file, $filesize );
-
-      $filewithext = basename($filename);         // outputi "tmp.txt"
-      $filewithoutext = basename($filename, ".txt"); // outputi "tmp"
-         fclose( $file );
-         echo ("File name with ext.: $filewithext<br>");
-        echo ("File name without ext.: $filewithoutext<br>");
-         echo ( "File size : $filesize bytes" );
-         echo ( "<pre>$filetext</pre>" );
-      ?>
-        </div>
+        
 
 
-        <div>
+        <div style="flex:1;">
           <?php
               // e fshin content edhe ja nis prej fillimi..e krijon ni file tri nese s ekziston
               //$myfile = fopen("newfile.txt", "w") or die("Unable to open file!"); 
 
               // kur tshton tekst e bon append tekstin e ri qe shtohet
               $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
-              $txt = "FIEK \n";
+              $txt = "Aurora\n";
               fwrite($myfile, $txt);
-              $txt = "PHP programming\n";
+              $txt = "Selimi\n";
               fwrite($myfile, $txt);
               fclose($myfile);
               ?>
 
               <p>
-                <pre>Para se tklikohet "Write function" tek quiz.php  mund tshtohet teksti
-          pastaj pas klikimit te butonit teksti i shtuar do te ruhet ne newfile.txt</pre>
+                <p class="p">Para se tklikohet "Write function" tek quiz.php  mund tshtohet teksti
+          pastaj pas klikimit te butonit teksti i shtuar do te ruhet ne newfile.txt</p>
             <input class="writebutton writebutton1" type="button" value="Write Function" 
             onclick="window.location.reload();"/>
             </p>
 
         </div>
-        <?php include('../components/footer.php') ?>
     </div>
 </body>
 
-</html>
 <script></script>
 <style>
 body,html{
-	height: 100%;
-	box-sizing: border-box;
-	margin:0;
+  height: calc(100% - 99px);
+  box-sizing: border-box;
+  margin:0;
 }
 .quiz{
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
+.p{
+  color:#545454;font-weight: 400;margin:3px 0;text-align: left; font-size: 16px;
+}
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -112,11 +107,14 @@ body,html{
 }
 
 .readclass {
-border: 2px solid gray;
-display: grid; 
-justify-content: space-between; 
-text-align: center;
-
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column; 
+  justify-content:center; 
+  text-align: center;
+  word-break: break-all;
+  word-wrap: break-word;
+  flex:1;
 }
 
 .writebutton {
@@ -145,3 +143,5 @@ text-align: center;
   color: white;
 }
 </style>
+</html>
+<?php include('../components/footer.php') ?>

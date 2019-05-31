@@ -8,10 +8,11 @@
   <div class="homepage">
     <div class="displayContent">
         <img src="../img/search.png" style="height: 120%;width: 80%;position: absolute;top:-100px;left:auto;right:auto;z-index:0;" alt="">
-        
-        <div style="z-index: 1;">
+        <div style="z-index: 1;position: relative;">
           <form autocomplete="off" class="example" action="javascript:void(0)">
-            <input type="text" placeholder="Search a user using '/user' or a language 'language'" name="search" onkeyup="showsuggestion(this.value);">
+            <object style="position:absolute;top:10px;left:10px;z-index: 100;" type="image/svg+xml" data="../img/search.svg">
+            </object>
+            <input style="padding-left:35px;" type="text" placeholder="Search a user using '/user' or a language 'language'" name="search" onkeyup="showsuggestion(this.value);">
           </form>
         </div>
         <div id="divsuggestion" style="z-index: 10;">
@@ -21,7 +22,7 @@
 </body>
 <style type="text/css">
   body,html{
-    height:calc(100% - 100px);
+    height:calc(100% - 99px);
     box-sizing: border-box;
     background-color: #fafafa;
   }

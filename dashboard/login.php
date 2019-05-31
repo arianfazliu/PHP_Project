@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('server.php');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,6 +78,9 @@ form{
 .login:focus{
 	color:white;
 }
+.checkbox{
+	display:flex;width:50%;margin:15px auto auto auto;color:#5f5f5f;justify-content: center; position: relative;
+}
 </style>
 </head>
 <body>
@@ -90,17 +93,20 @@ form{
 	  <form method="post" action="login.php">
 	  	<?php include('errors.php'); ?>
 	  	<div class="inputi">
-	  		
 	  		<object type="image/svg+xml" data="../img/user.svg">
 			</object>
-
-	  		<input  value="<?php echo $username; ?>" placeholder="Username" type="text" name="username" >
-
+	  		<input  value="<?php if(isset($_COOKIE["username"])){echo $_COOKIE["username"];}?>" placeholder="Username" type="text" name="username" >
 	  	</div>
 	  	<div class="inputi">
 	  		<object type="image/svg+xml" data="../img/lock.svg">
 			</object>
-	  		<input placeholder="Password" type="password" name="password">
+	  		<input placeholder="Password" type="password" name="password" value="<?php 
+	  		if(isset($_COOKIES["password"]))
+	  		{echo $_COOKIE["password"];}?>"/>
+	  	</div>
+	  	<div class="checkbox">
+	  		<label for="remember-me">Remember Me</label>
+	  		<input style="margin-top:1px;width: auto;background: #42b4f2a6;" type="checkbox" name="remember" <?php if(isset($_COOKIE["username"])){echo "checked='checked'";}?> />
 	  	</div>
 	  	<div class="inputi">
 	  		<input class="login" type="submit" name="login_user" value="Log in" id="btn">	  	

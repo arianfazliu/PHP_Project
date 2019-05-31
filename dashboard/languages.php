@@ -32,7 +32,7 @@ class Constructor{
 ?>
 <?php $construct = new Constructor() ?>
 <head>
-  <title>Home</title>
+  <title>Languages</title>
 <script>
 function myFunction(){
 

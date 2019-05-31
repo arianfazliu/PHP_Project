@@ -37,16 +37,6 @@
   </div>
   	
 <?php  endif ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
-</html>
 <style>
 .error{
 	color:red;

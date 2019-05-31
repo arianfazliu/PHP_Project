@@ -17,6 +17,10 @@
 					<input  value="<?php echo $username; ?>" placeholder="Username" type="text" name="user" id="user">
 				</div>
 				<div class="inputi">
+					<input style="border:none;" value="<?php echo $name;?>" placeholder="First Name" type="text" name="name" id="name">
+					<input style="border-top-left-radius: 0;border-bottom-left-radius: 0;" value="<?php echo $lname;?>" placeholder="Last Name" type="text" name="lname" id="lname">
+				</div>
+				<div class="inputi">
 					<object type="image/svg+xml" data="../img/maili.svg">
 					</object>
 					<input  placeholder="E-mail" value="<?php echo $email; ?>" type="text" name="email" id="email">

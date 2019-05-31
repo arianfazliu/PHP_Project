@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Footer</title>
 	<style>
 	.footer{
 		background-color: #63cdb7;

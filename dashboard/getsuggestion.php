@@ -1,10 +1,7 @@
 <?php
-
+session_start();
 $languages = array("English"=>"https://www.facebook.com/", "French"=>"https://www.facebook.com/", "German"=>"https://www.facebook.com/", "Korean"=>"https://www.facebook.com/","Estonian"=>"https://www.facebook.com/");
-
 $q = $_REQUEST["q"];
-
-
 $suggestion = "";
 
 
@@ -40,10 +37,15 @@ $result = mysqli_query($con,$sql);
 while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     $arrayU=array("Username: ".$row['username'],"Name: ".$row['Uname'],"Surname: ".$row['Usurname']);
     $arrayImploded= implode("<br>",$arrayU);
-        $suggestion ="<a href=\"\"><div class=\"sug\">".$arrayImploded."</div></a>";  
+    $suggestion ="<a href=\"profile.php\"><div class=\"sug\">".$arrayImploded."</div></a>";  
+    $_SESSION["user"] = $row['username'];
+    $_SESSION["name"] = $row['Uname'];
+    $_SESSION["lname"] = $row['Usurname'];
+    $_SESSION["phone"] = $row['phone'];
+    $_SESSION["email"] = $row['email'];
+
 }
 echo $suggestion === "" ? "<h3 style=\"color: grey;\">No users found.</h3>" : $suggestion;
-
 mysqli_close($con);
 }
 ?>
