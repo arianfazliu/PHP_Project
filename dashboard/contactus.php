@@ -45,7 +45,7 @@
         padding: 5px 0;
         font-size: 15px;
     }
-    input:last-child{
+    input:last-child {
         border:solid 1px #63cdb7;
         color:white;
         background-color: #63cdb7;
