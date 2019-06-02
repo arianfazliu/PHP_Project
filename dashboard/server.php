@@ -12,7 +12,21 @@ $errors = array();
 
 //hiqe prej komenti cila tvyn
 //Te arita dhe aurora:
-$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
+try
+{
+    if ($db = mysqli_connect("localhost","root","","login"))
+    {
+        echo "Connection established!";
+    }
+    else
+    {
+        throw new Exception('Unable to connect');
+    }
+}
+catch(Exception $e)
+{
+    echo $e->getMessage();
+}
 
 //te ariani: 
 //$db = mysqli_connect("localhost","root","nihon123","login") or die("could not connect to database");
