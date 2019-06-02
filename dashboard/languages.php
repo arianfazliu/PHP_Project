@@ -14,11 +14,6 @@ class Card{
 class CardB extends Card{
   private $percentage;
 
-  // public function __construct($title)
-  // {
-  //   $this->title=$title;
-  // }
-
   public function __construct($title,$text,$color,$percentage)
   {
     $this->title=$title;
@@ -62,11 +57,10 @@ mysqli_select_db($con,"login");
 $sql="SELECT languages FROM courses WHERE username = '$username'";
 $result = mysqli_query($con,$sql);
 $titles=array();
-// $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
 while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) { 
   $titles[] = $row['languages'];
 }
-//$titles = array('English','French','Korean','Italian');
  $texts = array('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi soluta reprehenderit facilis tenetur quisquam, natus suscipit vel, eius ipsum quibusdam cumque iusto culpa, praesentium quod fugiat! Tempore aliquid velit, odio!','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus, beatae inventore, quam, tempora quidem hic qui similique, molestiae nam a incidunt eum eos eligendi possimus maxime sit minus. Nobis.','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus commodi, possimus aspernatur, distinctio numquam molestias dolores eum, reprehenderit dignissimos doloremque est, optio? Nam non distinctio eveniet, quidem voluptatem quibusdam alias?','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor id, porro temporibus recusandae, illo laboriosam repudiandae velit nobis voluptas sapiente dicta a, cumque placeat corporis autem, asperiores accusamus sint commodi!',
  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi soluta reprehenderit facilis tenetur quisquam, natus suscipit vel, eius ipsum quibusdam cumque iusto culpa, praesentium quod fugiat! Tempore aliquid velit, odio!','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus, beatae inventore, quam, tempora quidem hic qui similique, molestiae nam a incidunt eum eos eligendi possimus maxime sit minus. Nobis.','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus commodi, possimus aspernatur, distinctio numquam molestias dolores eum, reprehenderit dignissimos doloremque est, optio? Nam non distinctio eveniet, quidem voluptatem quibusdam alias?','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor id, porro temporibus recusandae, illo laboriosam repudiandae velit nobis voluptas sapiente dicta a, cumque placeat corporis autem, asperiores accusamus sint commodi!',
  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi soluta reprehenderit facilis tenetur quisquam, natus suscipit vel, eius ipsum quibusdam cumque iusto culpa, praesentium quod fugiat! Tempore aliquid velit, odio!','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus, beatae inventore, quam, tempora quidem hic qui similique, molestiae nam a incidunt eum eos eligendi possimus maxime sit minus. Nobis.','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus commodi, possimus aspernatur, distinctio numquam molestias dolores eum, reprehenderit dignissimos doloremque est, optio? Nam non distinctio eveniet, quidem voluptatem quibusdam alias?','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor id, porro temporibus recusandae, illo laboriosam repudiandae velit nobis voluptas sapiente dicta a, cumque placeat corporis autem, asperiores accusamus sint commodi!');
@@ -74,7 +68,7 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
 $colors=array('#618fee','#ee8c62','#91e78e','#618fee','#618fee','#ee8c62','#91e78e','#618fee','#618fee','#ee8c62','#91e78e','#618fee');
 $cards = array();
 for ($i=0;$i<sizeof($titles);$i++){
-  //$cards[] = new CardB($titles[$i]);
+
 
     $cards[] = new CardB($titles[$i],$texts[$i],$colors[$i],$percentages[$i]); 
 }
