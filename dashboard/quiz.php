@@ -41,16 +41,18 @@
         
 
 
-        <div style="flex:1;">
+        <div style="flex:1;  border:2px solid gray;
+    border-radius: 20px;
+   margin-right: 40px; padding-left: 15px;">
           <?php
               // e fshin content edhe ja nis prej fillimi..e krijon ni file tri nese s ekziston
               //$myfile = fopen("newfile.txt", "w") or die("Unable to open file!"); 
 
               // kur tshton tekst e bon append tekstin e ri qe shtohet
               $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
-              $txt = "Aurora\n";
+              $txt = "Arian\n";
               fwrite($myfile, $txt);
-              $txt = "Selimi\n";
+              $txt = "FIEK\n";
               fwrite($myfile, $txt);
               fclose($myfile);
               ?>
@@ -114,6 +116,9 @@ body,html{
   word-break: break-all;
   word-wrap: break-word;
   flex:1;
+  border:2px solid gray;
+  border-radius: 20px;
+  margin-left: 40px;
 }
 
 .writebutton {
