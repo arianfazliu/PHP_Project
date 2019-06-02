@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include('server.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,17 +14,14 @@ session_start();
 				<h3 class="h3">Part 1 of the complete and inspirational mission to memorize <?php echo $_SESSION["lang"]?> Find your way around <?php echo $_SESSION["lang"]?>, talk about the future, learn some <?php echo $_SESSION["lang"]?> expressions that will impress everyone you meet! <br>
 					Start learning now by <b>adding this to your courses!</b>
 				</h3>
-				<button class="buttoni" onclick="addToCourses()">
-					ADD TO COURSES
-				</button>
+				<form action="lang.php" method="POST">
+				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn"></form>
 			</div>
 		</div>
 	</div>
 </body>
 <script>
-	function addToCourses(){
 
-	}
 </script>
 <style>
 	body,html{

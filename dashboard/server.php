@@ -7,6 +7,7 @@ $email    = "";
 $phone = "";
 $password_1 = "";
 $password_2 = "";
+$language="";
 $errors = array(); 
 
 //hiqe prej komenti cila tvyn
@@ -102,6 +103,13 @@ if (isset($_POST['login_user'])) {
       array_push($errors, "Wrong username/password combination");
     }
   }
+}
+
+if (isset($_POST['addcourse'])){
+  $language=$_SESSION["lang"];
+  $username=$_SESSION["username"];
+  $query = "INSERT INTO courses (username, languages) VALUES('$username', '$language')";
+  mysqli_query($db, $query); 
 }
 
 ?>
