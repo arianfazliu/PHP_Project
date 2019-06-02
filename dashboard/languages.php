@@ -63,7 +63,7 @@ $sql="SELECT languages FROM courses WHERE username = '$username'";
 $result = mysqli_query($con,$sql);
 $titles=array();
 // $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) { 
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
   $titles[] = $row['languages'];
 }
 //$titles = array('English','French','Korean','Italian');
@@ -74,8 +74,6 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
 $colors=array('#618fee','#ee8c62','#91e78e','#618fee','#618fee','#ee8c62','#91e78e','#618fee','#618fee','#ee8c62','#91e78e','#618fee');
 $cards = array();
 for ($i=0;$i<sizeof($titles);$i++){
-  //$cards[] = new CardB($titles[$i]);
-
     $cards[] = new CardB($titles[$i],$texts[$i],$colors[$i],$percentages[$i]); 
 }
 include('../components/header.php');
@@ -98,7 +96,7 @@ function myFunction(){
 </script>
 <style type="text/css">
 html,body{
-  height: calc(100% - 119px);
+  height: 100%;
   box-sizing: border-box;
   background-color: #fafafa;
 }
