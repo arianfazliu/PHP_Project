@@ -16,7 +16,6 @@ try
 {
     if ($db = mysqli_connect("localhost","root","","login"))
     {
-        echo "Connection established!";
     }
     else
     {
