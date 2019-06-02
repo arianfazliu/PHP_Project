@@ -8,6 +8,7 @@ Arian
 FIEK
 Arian
 FIEK
+<<<<<<< HEAD
 Arian
 FIEK
 Arian
@@ -70,3 +71,5 @@ Arian
 FIEK
 Arian
 FIEK
+=======
+>>>>>>> 94c69165acb4700db3f1b6d1a00cdb990c5eca84
