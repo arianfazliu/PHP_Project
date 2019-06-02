@@ -45,6 +45,7 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     $_SESSION["email"] = $row['email'];
 
 }
+
 echo $suggestion === "" ? "<h3 style=\"color: grey;\">No users found.</h3>" : $suggestion;
 mysqli_close($con);
 }

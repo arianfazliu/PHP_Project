@@ -36,10 +36,10 @@
 		</div>
 		<div>
 			<h4 class="h3-tefooteri">Follow Us</h4>
-			<p><object  type="image/svg+xml" data="../img/facebook.svg">
-					</object> FACEBOOK</p>
-			<p><object type="image/svg+xml" data="../img/github.svg">
-					</object> GITHUB</p>
+			<a href="https://www.facebook.com/duolingo/"><p><object  type="image/svg+xml" data="../img/facebook.svg">
+					</object> FACEBOOK</p></a>
+			<a href="https://github.com/boredalis/PHP_Project"><p><object type="image/svg+xml" data="../img/github.svg">
+					</object> GITHUB</p></a>
 		</div>
 		<div >
 			<h4 class="h3-tefooteri">Address</h4>
