@@ -14,15 +14,38 @@ include('server.php');
 				<h3 class="h3">Part 1 of the complete and inspirational mission to memorize <?php echo $_SESSION["lang"]?> Find your way around <?php echo $_SESSION["lang"]?>, talk about the future, learn some <?php echo $_SESSION["lang"]?> expressions that will impress everyone you meet! <br>
 					Start learning now by <b>adding this to your courses!</b>
 				</h3>
-				<form action="lang.php" method="POST">
-				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn"></form>
+				<form action="" method="POST" id="form">
+				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn" onclick="changeValue()"></form>
 			</div>
 		</div>
 	</div>
 </body>
-<script>
 
-</script>
+
+<?php
+$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
+if (isset($_POST['addcourse'])){
+  $language=$_SESSION["lang"];
+  $username=$_SESSION["username"];
+  
+  $q="SELECT languages from courses where username='$username' and languages='$language'";
+  $results = mysqli_query($db, $q);
+    if(mysqli_num_rows($results) == 1){ ?>
+       <script>
+			 var btn= document.getElementById("btn");
+			 var form = document.getElementById("form");
+			 function changeValue(){
+				 btn.value="You already added this.";
+         form.action="javascript:void(0)";
+			 }
+			  </script>
+			 <?php }
+    else{
+  $query = "INSERT INTO courses (username, languages) VALUES('$username', '$language')";
+  mysqli_query($db, $query); 
+}}
+?>
+
 <style>
 	body,html{
 	  height: calc(100% - 99px);
