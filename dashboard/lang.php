@@ -25,29 +25,42 @@ include('server.php');
 
 
 <?php
-$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
+require_once("dbconfig.php");
+try
+{
+    $db= new PDO("mysql:host=".DBHOST.";dbname=".DBNAME,DBUSER,DBPASS);
+    $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    echo "Lidhja me DB u realizua me sukses!";
+}
+catch(PDOException $pdoExcep)
+{
+    echo "Lidhja me DB nuk eshte realizuar!". $pdoExcep->getMessage();
+}
 if (isset($_POST['addcourse'])){
   $language=$_SESSION["lang"];
   $username=$_SESSION["username"];
   
   $q="SELECT languages from courses where username='$username' and languages='$language'";
-  $results = mysqli_query($db, $q);
-    if(mysqli_num_rows($results) == 1){ ?>
+
+	$q1 = $db->query($q);
+	$count = $q1->rowCount();
+ 
+    if($count == 1){ ?>
        <script>
 			 var btn= document.getElementById("btn");
 			 var form = document.getElementById("form");
 			 function changeValue(){
-				// btn.value="You already added this.";
-               //  form.action="javascript:void(0)";
+		
 				 alert("This language has been added to courses");
 			 }
 			  </script>
 			 <?php }
     else{
   $query = "INSERT INTO courses (username, languages) VALUES('$username', '$language')";
-  mysqli_query($db, $query); 
+	$db->query($query);
 }}
 if (isset($_POST['delcourse'])){
+	$db = mysqli_connect("localhost","root","","login") or die ("could not connect to database");
 	$language=$_SESSION["lang"];
 	$username=$_SESSION["username"];
 	$q="SELECT languages from courses where username='$username' and languages='$language'";
