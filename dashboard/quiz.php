@@ -57,7 +57,7 @@
               fclose($myfile);
               ?>
               <p>
-                <p class="p">Para se tklikohet "Write function" tek quiz.php  mund tshtohet teksti
+                <p class="pp">Para se tklikohet "Write function" tek quiz.php  mund tshtohet teksti
           pastaj pas klikimit te butonit teksti i shtuar do te ruhet ne newfile.txt</p>
             <input class="writebutton writebutton1" type="button" value="Write Function" 
             onclick="window.location.reload();"/>
@@ -81,7 +81,7 @@ body,html{
   align-items: center;
   text-align: center;
 }
-.p{
+.pp{
   color:#545454;font-weight: 400;margin:3px 0;text-align: left; font-size: 16px;
 }
 .button {

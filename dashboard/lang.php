@@ -39,6 +39,7 @@ if (isset($_POST['addcourse'])){
 			 function changeValue(){
 				 btn.value="You already added this.";
          form.action="javascript:void(0)";
+				 alert("This language has been added to courses");
 			 }
 			  </script>
 			 <?php }

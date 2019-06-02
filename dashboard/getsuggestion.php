@@ -23,10 +23,13 @@ if ($q2 !== "/") {
 }
 
 else if(substr($q,0,1) == "/"){
+    $cantconnect = "Couldnt connect";
+$cannotconnect = preg_replace('/Couldnt/','Could not',$cantconnect);
+
 define('MYSQL_ASSOC',MYSQLI_ASSOC);
 $con = mysqli_connect("localhost","root","","login");
 if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
+    die($cannotconnect. mysqli_error($con));
 }
 
 $len2=strlen($q);
