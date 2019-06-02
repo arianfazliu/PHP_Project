@@ -11,7 +11,7 @@ session_start();
 			</div>
 			<div style="margin-left:30px;">
 				<h2 class="h2"><?php echo $_SESSION["lang"]?></h2>
-				<h3 class="h3">Part 1 of the complete and inspirational mission to memories <?php echo $_SESSION["lang"]?> Find your way around <?php echo $_SESSION["lang"]?>, talk about the future, learn some <?php echo $_SESSION["lang"]?> expressions that will impress everyone you meet! <br>
+				<h3 class="h3">Part 1 of the complete and inspirational mission to memorize <?php echo $_SESSION["lang"]?> Find your way around <?php echo $_SESSION["lang"]?>, talk about the future, learn some <?php echo $_SESSION["lang"]?> expressions that will impress everyone you meet! <br>
 					Start learning now by <b>adding this to your courses!</b>
 				</h3>
 				<button class="buttoni" onclick="addToCourses()">
