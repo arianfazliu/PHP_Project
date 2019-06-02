@@ -19,8 +19,7 @@ session_start();
 				</div>
 			</div>
 		</div>
-		<button onclick="window.location='dashboard.php'" class="btni"><object type="image/svg+xml" data="../img/arrow-left.svg">
-		</object>Go back</button>
+		<button onclick="window.location='dashboard.php'" class="btni">Go back</button>
 	</div>
 </body>
 <style>
