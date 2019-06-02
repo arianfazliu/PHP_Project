@@ -31,7 +31,7 @@
 		</div>
 		<div>
 			<h4 class="h3-tefooteri">Company</h4>
-			<p>About Us </p>
+			<p onclick="window.location='info.php'">About Us </p>
 			<p onclick="window.location='contactus.php'">Contact  </p>
 		</div>
 		<div>
