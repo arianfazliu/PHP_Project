@@ -18,8 +18,7 @@ include('server.php');
 				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn" onclick="changeValue()"></form>
 			</div>
 		</div>
-		<button onclick="window.location='dashboard.php'" class="btni"><object type="image/svg+xml" data="../img/arrow-left.svg">
-		</object>Go back</button>
+		<button onclick="window.location='dashboard.php'" class="btni">Go back</button>
 	</div>
 </body>
 
@@ -38,7 +37,7 @@ if (isset($_POST['addcourse'])){
 			 var form = document.getElementById("form");
 			 function changeValue(){
 				 btn.value="You already added this.";
-         form.action="javascript:void(0)";
+                 form.action="javascript:void(0)";
 				 alert("This language has been added to courses");
 			 }
 			  </script>

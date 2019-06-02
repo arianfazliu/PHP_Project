@@ -26,10 +26,10 @@
               $filewithext = basename($filename);         // outputi "tmp.txt"
               $filewithoutext = basename($filename, ".txt"); // outputi "tmp"
                fclose( $file );
-               echo ("<p class=\"p\">File name with ext.: $filewithext</p>");
-               echo ("<p class=\"p\">File name without ext.: $filewithoutext</p>");
-               echo ( "<p class=\"p\">File size : $filesize bytes</p>");
-               echo ( "<p class=\"p\">$filetext</p>" );
+               echo ("<p class=\"pp\">File name with ext.: $filewithext</p>");
+               echo ("<p class=\"pp\">File name without ext.: $filewithoutext</p>");
+               echo ( "<p class=\"pp\">File size : $filesize bytes</p>");
+               echo ( "<p class=\"pp\">$filetext</p>" );
             ?>
         </div>
         <div style="flex:1;">
