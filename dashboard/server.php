@@ -110,6 +110,7 @@ if (isset($_POST['addcourse'])){
   $username=$_SESSION["username"];
   $query = "INSERT INTO courses (username, languages) VALUES('$username', '$language')";
   mysqli_query($db, $query); 
+  header('location: languages.php');
 }
 
 ?>

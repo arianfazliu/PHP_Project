@@ -19,6 +19,8 @@ session_start();
 				</div>
 			</div>
 		</div>
+		<button onclick="window.location='dashboard.php'" class="btni"><object type="image/svg+xml" data="../img/arrow-left.svg">
+		</object>Go back</button>
 	</div>
 </body>
 <style>
@@ -52,9 +54,23 @@ body,html{
 .homepage{
   	height: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
+	position: relative;
+	justify-content: center;
+	text-align: left;
+}
+.btni{
+	position: absolute;
+	bottom:50px;
+	border:solid 1px #63cdb7;
+	color:#63cdb7;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 30px;
+	font-size:15px;
+	background-color: white;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
 }
 .profile{
   	position: relative;

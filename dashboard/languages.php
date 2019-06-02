@@ -98,13 +98,13 @@ function myFunction(){
 </script>
 <style type="text/css">
 html,body{
-  height: 100%;
+  height: calc(100% - 119px);
   box-sizing: border-box;
   background-color: #fafafa;
 }
 .homepage{
   padding: 20px 100px;
-  min-height: 70%;
+  height: 100%;
 }
 .display_grid{
   display: grid;

@@ -15,9 +15,11 @@ include('server.php');
 					Start learning now by <b>adding this to your courses!</b>
 				</h3>
 				<form action="lang.php" method="POST">
-				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn"></form>
+				<input class="buttoni" type="submit" name="addcourse" value="ADD COURSE" id="btn"></form>
 			</div>
 		</div>
+		<button onclick="window.location='dashboard.php'" class="btni"><object type="image/svg+xml" data="../img/arrow-left.svg">
+		</object>Go back</button>
 	</div>
 </body>
 <script>
@@ -42,8 +44,23 @@ include('server.php');
 	.homepage{
 	  	height: 100%;
 		display: flex;
-		justify-content: space-between;
+		position: relative;
+		justify-content: center;
 		text-align: left;
+	}
+	.btni{
+		position: absolute;
+		bottom:100px;
+		border:solid 1px #63cdb7;
+		color:#63cdb7;
+		outline: none;
+		cursor: pointer;
+		padding: 10px 30px;
+		font-size:15px;
+		background-color: white;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
 	}
 	.profile{
 	  	position: relative;
