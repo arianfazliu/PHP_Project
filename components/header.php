@@ -68,18 +68,18 @@
 			  } 
 			}
 			?>
-			<!-- pathi arian
+			<!-- pathi arian-->
 			<li><a class="spanat <?php active('dashboard.php');?>" href="http://localhost:82/PHP_project/dashboard/dashboard.php">Home</a></li>
 		    <li><a class="spanat <?php active('languages.php');?>" href="http://localhost:82/PHP_project/dashboard/languages.php">Languages</a></li>
 		    <li><a class="spanat <?php active('quiz.php');?>" href="http://localhost:82/PHP_project/dashboard/quiz.php">Info</a></li>
-		    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost:82/PHP_project/dashboard/contactus.php">Contact Us</a></li>-->
+		    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost:82/PHP_project/dashboard/contactus.php">Contact Us</a></li>
 
 		    <!-- 
-			pathi aurora-->
+			pathi aurora
 		    <li><a class="spanat <?php active('dashboard.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/dashboard.php">Home</a></li>
 		    <li><a class="spanat <?php active('languages.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/languages.php">Languages</a></li>
 		    <li><a class="spanat <?php active('quiz.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/quiz.php">Info</a></li>
-		    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/contactus.php">Contact Us</a></li> 
+		    <li><a class="spanat <?php active('contactus.php');?>" href="http://localhost/Webucator/ClassFiles/PHPBasics/Demos/PHP_project/dashboard/contactus.php">Contact Us</a></li> -->
 			<button onclick="window.location='main.php'" class="btn">LOG OUT</button>
 		</div>
 	</div>
