@@ -15,7 +15,8 @@ include('server.php');
 					Start learning now by <b>adding this to your courses!</b>
 				</h3>
 				<form action="" method="POST" id="form">
-				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn" onclick="changeValue()"></form>
+				<input class="buttoni" type="submit" name="addcourse" value="Add Course" id="btn" onclick="changeValue()">
+				<input class="buttoni" type="submit" name="delcourse" value="Delete Course" id="btn1" onclick="changeValue1()" ></form>
 			</div>
 		</div>
 		<button onclick="window.location='dashboard.php'" class="btni">Go back</button>
@@ -36,8 +37,8 @@ if (isset($_POST['addcourse'])){
 			 var btn= document.getElementById("btn");
 			 var form = document.getElementById("form");
 			 function changeValue(){
-				 btn.value="You already added this.";
-                 form.action="javascript:void(0)";
+				// btn.value="You already added this.";
+               //  form.action="javascript:void(0)";
 				 alert("This language has been added to courses");
 			 }
 			  </script>
@@ -45,6 +46,27 @@ if (isset($_POST['addcourse'])){
     else{
   $query = "INSERT INTO courses (username, languages) VALUES('$username', '$language')";
   mysqli_query($db, $query); 
+}}
+if (isset($_POST['delcourse'])){
+	$language=$_SESSION["lang"];
+	$username=$_SESSION["username"];
+	$q="SELECT languages from courses where username='$username' and languages='$language'";
+	$results = mysqli_query($db, $q);
+	if(mysqli_num_rows($results) == 0){ ?>
+		<script>
+		var btn= document.getElementById("btn1");
+		var form = document.getElementById("form");
+		function changeValue1(){
+		//	btn.value="You already added deleted this.";
+						//	form.action="javascript:void(0)";
+			alert("This language has already been deleted from courses");
+		}
+		 </script>
+		<?php }
+ else{
+$query = "DELETE from courses where username='$username' and languages='$language'";
+mysqli_query($db, $query); 
+	
 }}
 ?>
 
