@@ -105,17 +105,5 @@ if (isset($_POST['login_user'])) {
   }
 }
 
-// if (isset($_POST['addcourse'])){
-//   $language=$_SESSION["lang"];
-//   $username=$_SESSION["username"];
-  
-//   $q="SELECT languages from courses where username='$username' and languages='$language'";
-//   $results = mysqli_query($db, $q);
-//     if(mysqli_num_rows($results) == 1){
-//        echo "You already added this";
-//     }
-//     else{
-//   $query = "INSERT INTO courses (username, languages) VALUES('$username', '$language')";
-//   mysqli_query($db, $query); 
-// }}
+
 ?>

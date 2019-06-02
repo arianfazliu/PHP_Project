@@ -98,7 +98,7 @@ html,body{
 }
 .homepage{
   padding: 20px 100px;
-  min-height: 70%;
+  height: 100%;
 }
 .display_grid{
   display: grid;
