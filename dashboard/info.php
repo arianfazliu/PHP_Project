@@ -3,11 +3,13 @@ include('../components/header.php');
 class Info{
   var $information;
   var $color;
+  var $fontsize;
 
-  public function __construct($information,$color)
+  public function __construct($information,$color,$fontsize)
   {
     $this->information=$information;
     $this->color=$color;
+    $this->fontsize=$fontsize;
   }
 }
 ?>
@@ -31,9 +33,10 @@ Vivamus sagittis metus libero, sit amet hendrerit urna egestas id.
        Nunc lacinia volutpat vestibulum.
         Curabitur sollicitudin, risus et semper ullamcorper, metus lectus placerat tellus,
          et vestibulum dui odio nec leo.";
-$info =  new Info($string, "#888D8A");
-$info2= new Info($string,"#BDC2BF");
-$info3 = new Info($string,"#D2DED7");
+$multi = array( array("#888D8A","#BDC2BF","#D2DED7"),array(25,20,15));
+$info =  new Info($string, $multi[0][0],$multi[1][0]);
+$info2= new Info($string,$multi[0][1],$multi[1][1]);
+$info3 = new Info($string,$multi[0][2],$multi[1][2]);
          echo "<p style=\"color:$info->color\">".$info->information;
          echo "<p style=\"color:$info2->color\">".$info2->information;
          echo "<p style=\"color:$info3->color\">".$info3->information;
@@ -43,10 +46,6 @@ $info3 = new Info($string,"#D2DED7");
 
 </div>
 </body>
-
-
-
-
 
 <?php include('../components/footer.php')  ?>
 <style>
