@@ -112,7 +112,7 @@ form{
 	  		<input class="login" type="submit" name="login_user" value="Log in" id="btn">	  	
 	  	</div>
 	  </form>
-	  <p style="cursor:pointer;margin-top:100px;color: #a9b5bf;">Not yet a member? <span onclick="window.location='signup.php'" style="font-size: 16px;color:#73ccf5">Sign up!</span></p>
+	  <p style="cursor:pointer;margin-top:100px;color: #a9b5bf;">Not a member yet? <span onclick="window.location='signup.php'" style="font-size: 16px;color:#73ccf5">Sign up!</span></p>
   	</div>
   </div>
 </body>

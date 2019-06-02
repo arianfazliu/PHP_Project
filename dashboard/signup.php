@@ -44,7 +44,7 @@
 					<input class="login" type="submit" name="reg_user" value="Sign Up" id="btn">
 				</div>
 			</form>
-			<p style="cursor:pointer;margin-top:100px;color: #a9b5bf;">Already have an account? <span onclick="window.location='login.php'" style="color:#73ccf5">Log In!</span></p>
+			<p style="cursor:pointer;margin-top:50px;margin-bottom:100px;color: #a9b5bf;">Already have an account? <span onclick="window.location='login.php'" style="color:#73ccf5">Log In!</span></p>
 		</div>
 		<div style="flex:1; display: flex;align-items: center; justify-content: center;">
 			<img src="../img/launch.png" style="height: 500px;width:600px;" alt="">
